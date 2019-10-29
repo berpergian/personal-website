@@ -72,11 +72,6 @@ export default function ProfileSection(props) {
 					<LinkedInIcon />
 					</IconButton>
 				</Tooltip>
-				<Tooltip title="WhatsApp">
-					<IconButton target="_blank" href={socialMedia.whatsapp}>
-					<WhatsAppIcon />
-					</IconButton>
-				</Tooltip>
 				</div>
 		      <Divider/>
 		      <div className={classes.centerPosition}>
