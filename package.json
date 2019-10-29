@@ -1,19 +1,14 @@
 {
   "name": "personal-website",
   "version": "0.1.0",
-  "homepage": "https://berpergian.github.io",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.5.1",
     "@material-ui/icons": "^4.5.1",
     "clsx": "^1.0.4",
-    "gh-pages": "^2.1.1",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
-    "react-helmet": "^5.2.1",
-    "react-scripts": "3.2.0",
-    "react-table": "^6.10.3",
-    "recharts": "^1.8.5"
+    "react-scripts": "3.2.0"
   },
   "scripts": {
     "predeploy": "npm run build",
