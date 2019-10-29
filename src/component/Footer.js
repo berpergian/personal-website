@@ -6,6 +6,16 @@ import Link from '@material-ui/core/Link';
 
 const useStyles = makeStyles(theme => ({
 	footer: {
+	    marginTop: 'auto',
+	    backgroundColor: 'white',
+	    opacity: 0.6,
+    	transition: 'all ease 400ms',
+    	'&:hover': {
+    		opacity: 1,
+    	},
+    	'@media only screen and (max-width: 768px)': {
+    		opacity: 1
+    	}
 	}
 }))
 

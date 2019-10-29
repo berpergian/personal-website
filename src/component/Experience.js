@@ -15,6 +15,7 @@ import ArrowRightIcon from '@material-ui/icons/ArrowRight';
 const useStyles = makeStyles(theme => ({
 	layout: {
 		display: 'grid',
+		gridTemplateColumns: "auto 100px",
 	    '@media only screen and (max-width: 400px)': {
 	      display: 'block'
 	    }
