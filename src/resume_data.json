@@ -1,0 +1,121 @@
+{
+    "name": "Muhammad Ganjar Imanudin",
+    "photo": "/ProfilePicture.jpg",
+    "summaryBio": "Hi! I'm fresh graduated software engineer from Bandung State of Polytechnic in Bandung, Indonesia. Interest in developing front-end website.",
+    "socialMedia":
+    {
+        "email": "mailto:emailmganjar@gmail.com",
+        "github": "https://github.com/berpergian",
+        "twitter": "https://twitter.com/muh_ganjar",
+        "whatsapp": "https://api.whatsapp.com/send?phone=6289623108356",
+        "linkedin": "https://www.linkedin.com/in/muhganjar/"
+    },
+    "skills":
+    {
+        "profSkill":
+        [
+            {
+                "name": "HTML & CSS",
+                "logo": "htmlcss.jpg"
+            },
+            {
+                "name": "Javascript",
+                "logo": "js.png"
+            }
+        ],
+        "learnSkill":
+        [
+            {
+                "name": "ReactJS",
+                "logo": "react.png"
+            },
+            {
+                "name": "ExpressJS",
+                "logo": "expressjs.png"
+            },
+            {
+                "name": "Python",
+                "logo": "python.png"
+            },
+            {
+                "name": "MySQL",
+                "logo": "mysql.png"
+            }
+        ],
+        "knowSkill":
+        [
+            {
+                "name": "Git",
+                "logo": "git.png"
+            },
+            {
+                "name": "Github",
+                "logo": "github.png"
+            }
+        ],
+        "others":
+        [
+            "Microservices",
+            "Data Analytics",
+            "Machine Learning"
+        ]
+    },
+    "experience":
+    [
+        {
+            "start": "November 2017",
+            "end": "January 2018",
+            "position": "Front-end Web",
+            "company": "Ciptadra Softindo",
+            "site": "https://ciptadrasoft.com/",
+            "location": "Depok",
+            "logo": "ciptadra.png",
+            "descJob":
+            [
+                "Continue develop integrating data with back-end developer to presenting data neatly"
+            ]
+        },
+        {
+            "start": "July 2017",
+            "end": "November 2017",
+            "position": "Front-end Web Internship",
+            "company": "Ciptadra Softindo",
+            "site": "https://ciptadrasoft.com/",
+            "location": "Depok",
+            "logo": "ciptadra.png",
+            "descJob":
+            [
+                "Design and Develop Admin Dashboard website for city government using Phalcon and Bootstrap framework",
+                "Design and Develop mobile version of Admin Dashboard website for city government website in Android "
+            ]
+        }
+    ],
+    "portofolio":
+    [
+        {
+            "title": "Mahjong Soul Desktop",
+            "description": "(Unofficial) Dekstop version of Mahjong Soul English Game for Windows",
+            "image": "mjsoul.png",
+            "site": "",
+            "github": "https://github.com/berpergian/MahjongSoul-Dekstop",
+            "tech":
+            [
+                "ElectronJS",
+                "WebView"
+            ]
+        },
+        {
+            "title": "To the 100",
+            "description": "Snakes and ladders board game using C language",
+            "image": "",
+            "site": "",
+            "github": "https://github.com/berpergian/Gotta-Get-the-Gold",
+            "tech":
+            [
+                "C",
+                "Array 2D",
+                "Data structure"
+            ]
+        }
+    ]
+}
