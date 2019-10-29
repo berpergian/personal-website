@@ -22,15 +22,7 @@ const useStyles = makeStyles(theme => ({
 	},
 	card: {
 		display: 'flex',
-		flexDirection: 'column',
-		opacity: 0.6,
-    	transition: 'all ease 400ms',
-    	'&:hover': {
-    		opacity: 1,
-    	},
-    	'@media only screen and (max-width: 768px)': {
-    		opacity: 1
-    	}
+		flexDirection: 'column'
 	},
 	cardMedia: {
 		
