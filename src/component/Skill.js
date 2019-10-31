@@ -12,6 +12,7 @@ const useStyles = makeStyles(theme => ({
 	},
 	layout: {
 		display: 'grid',
+		gridTemplateColumns: "auto auto",
 	    '@media only screen and (max-width: 400px)': {
 	      display: 'block'
 	    }

@@ -29,8 +29,20 @@
                 "logo": "react.png"
             },
             {
-                "name": "ExpressJS",
-                "logo": "expressjs.png"
+                "name": "AngularJS",
+                "logo": "angularjs.png"
+            },
+            {
+                "name": "PHP",
+                "logo": "php.png"
+            },
+            {
+                "name": "CodeIgniter",
+                "logo": "codeigniter.png"
+            },
+            {
+                "name": "Phalcon",
+                "logo": "phalcon.png"
             },
             {
                 "name": "Python",
@@ -50,6 +62,10 @@
             {
                 "name": "Github",
                 "logo": "github.png"
+            },
+            {
+                "name": "ExpressJS",
+                "logo": "expressjs.png"
             }
         ],
         "others":
