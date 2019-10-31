@@ -25,15 +25,18 @@ export default function Footer() {
 	return (
 		<footer className={classes.footer}>
 			<Container maxWidth="sm">
-	          <Typography variant="body2" color="textSecondary" align="center">
-	          	Background Photo by
-	          	{` `}
-	          	<Link color="inherit" href="https://unsplash.com/photos/IocJwyqRv3M">
-	          		Louie Martinez
-	          	</Link>
-	          	{` `}
-	          	on Unsplash
-	          </Typography>
+				<Typography variant="body2" color="textSecondary" align="center">
+					© Muhammad Ganjar Imanudin 2019 
+				</Typography>
+				<Typography variant="body2" color="textSecondary" align="center">
+					Background Photo by
+					{` `}
+					<Link color="inherit" href="https://unsplash.com/photos/IocJwyqRv3M">
+						Louie Martinez
+					</Link>
+					{` `}
+					on Unsplash
+				</Typography>
 	        </Container>
 	    </footer>
 	)

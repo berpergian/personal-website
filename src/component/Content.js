@@ -9,7 +9,7 @@ const resumeData = require('../resume_data.json');
 const useStyles = makeStyles(theme => ({
   cardGrid: {
     paddingTop: theme.spacing(5),
-    paddingBottom: theme.spacing(5),
+    paddingBottom: theme.spacing(4),
   }
 }));
 
