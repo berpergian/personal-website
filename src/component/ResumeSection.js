@@ -57,7 +57,8 @@ const StyledTab = withStyles((theme: Theme) =>
 const useStyles = makeStyles(theme => ({
 	paper: {
     	overflow: 'auto',
-    	flexDirection: 'column'
+    	flexDirection: 'column',
+    	height: "549.172px"
 	},
 
 }));

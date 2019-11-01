@@ -108,6 +108,32 @@
     "portofolio":
     [
         {
+            "title": "Depok Datawarehouse",
+            "description": "Website which provides information from reports and data on each operational of the local government of Depok to the governor",
+            "image": "depokdw.png",
+            "site": "",
+            "github": "",
+            "tech":
+            [
+                "PHP",
+                "Phalcon",
+                "Data Visualization"
+            ]
+        },
+        {
+            "title": "Depok Single Window",
+            "description": "Mobile app which provides centralization of local government services to Depok residents",
+            "image": "",
+            "site": "",
+            "github": "",
+            "tech":
+            [
+                "Java",
+                "Android",
+                "WebView"
+            ]
+        },
+        {
             "title": "Mahjong Soul Desktop",
             "description": "(Unofficial) Dekstop version of Mahjong Soul English Game for Windows",
             "image": "mjsoul.png",
