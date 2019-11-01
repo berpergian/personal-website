@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './css/App.css';
 import Content from './component/Content';
-import Header from './component/Header';
 import Footer from './component/Footer';
 
 function App() {
@@ -23,7 +22,6 @@ function App() {
 
   return (
     <div className="App" style={{ backgroundImage: `url(${backgroundUrl})`}}>
-      {/*<Header />*/}
       <Content />
       <Footer />
     </div>
