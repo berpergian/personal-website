@@ -63,7 +63,7 @@ export default function Skill(props) {
 			<Divider style={{ marginTop: 5, marginBottom: 5 }} />
 			<div className={classes.layout}>
 				<div className={classes.headerColumn}>
-					Learned
+					Learn about
 				</div>
 				<div className={classes.skillPos}>
 					{props.skillData.learnSkill.map(skill => (

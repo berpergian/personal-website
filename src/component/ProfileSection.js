@@ -75,8 +75,8 @@ export default function ProfileSection(props) {
 				</div>
 		      <Divider/>
 		      <div className={classes.centerPosition}>
-			      <Button variant="contained" classes={{root:classes.button,label: classes.label,}}>
-			      		Download CV
+			      <Button variant="contained" classes={{root:classes.button,label: classes.label,}} href="/Resume.pdf" target="_blank">
+			      		My Resume
 			      </Button>
 			      <Button variant="contained" classes={{root:classes.button,label: classes.label,}} href={socialMedia.email}>
 			      		Hire Me!
