@@ -1,3 +1,4 @@
+/* Libraries */
 import React from 'react';
 import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
@@ -23,9 +24,6 @@ const useStyles = makeStyles(theme => ({
 		display: 'flex',
 		flexDirection: 'column'
 	},
-	cardMedia: {
-		
-	},
 	cardContent: {
 		flexGrow: 1,
 	},
@@ -34,6 +32,9 @@ const useStyles = makeStyles(theme => ({
 	},
 	centerPosition: {
 		textAlign: "center"
+	},
+	nameText: {
+		fontSize: 18
 	}
 }));
 
@@ -43,9 +44,9 @@ export default function ProfileSection(props) {
 
 	return (
 		<Card className={classes.card} elevation={0}>
-			<CardMedia className={classes.cardMedia} component="img" image={props.resumeData.photo} title="Profile Picture" />
+			<CardMedia component="img" image={props.resumeData.photo} title="Profile Picture" />
 		    <CardContent classes={classes.cardContent}>
-		      <Typography style={{fontSize:18,}} variant="h6" gutterBottom component="h2">{props.resumeData.name}</Typography>
+		      <Typography classes={{h6: classes.nameText}} variant="h6" gutterBottom component="h2">{props.resumeData.name}</Typography>
 		      <Typography variant="body2" gutterBottom color="textSecondary" component="p">
 		        {props.resumeData.summaryBio}
 		      </Typography>

@@ -103,9 +103,6 @@ export default function Portofolio(props) {
 
 	return (
 		<div>
-			<Typography variant="h6" align="justify" gutterBottom>
-				Some Things I Have Built
-			</Typography>
 			{props.portoData.map((porto, index) => (
 				<div>
 					<div className={classes.layout}>

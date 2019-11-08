@@ -18,8 +18,6 @@ import CodeIcon from '@material-ui/icons/Code';
 import AssignmentIcon from '@material-ui/icons/Assignment';
 import BusinessIcon from '@material-ui/icons/Business';
 
-
-
 interface TabPanelProps {
   children?: React.ReactNode;
   index: any;
@@ -47,9 +45,6 @@ const StyledTab = withStyles((theme: Theme) =>
       fontWeight: theme.typography.fontWeightRegular,
       fontSize: theme.typography.pxToRem(15),
       marginRight: theme.spacing(1),
-      '&:focus': {
-        opacity: 1,
-      },
     },
   }),
 )((props: StyledTabProps) => <Tab disableRipple {...props} />);
