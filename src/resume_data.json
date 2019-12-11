@@ -134,6 +134,20 @@
             ]
         },
         {
+            "title": "Online Shop Website",
+            "description": "(Unfinished) Online Shop Website using Angular2 (ver 2) Framework for web programming course in semester 5",
+            "image": "",
+            "site": "",
+            "github": "https://github.com/berpergian/GhtAngularFrontend",
+            "tech":
+            [
+                "Angular2",
+                "Bootstrap",
+                "Web",
+
+            ]
+        },
+        {
             "title": "Mahjong Soul Desktop",
             "description": "(Unofficial) Dekstop version of Mahjong Soul English Game for Windows",
             "image": "mjsoul.png",
