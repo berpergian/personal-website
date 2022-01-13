@@ -30,8 +30,8 @@ const useStyles = makeStyles(theme => ({
 		borderRadius: 4,
 	},
 	skillPos: {
-		gridColumnStart: 2, 
-		gridColumnEnd: 3, 
+		gridColumnStart: 2,
+		gridColumnEnd: 3,
 		textAlign: "right"
 	}
 }));
@@ -41,19 +41,12 @@ export default function Skill(props) {
 
 	return (
 		<div>
-			<Typography variant="body2" align="justify" gutterBottom>
-				Before I graduate from my college, I worked at a software house Ciptadra to develop high-quality front-end website.
-				Currently, I'm looking for a job which can develop my expertise, especially in the front-end field.
-			</Typography>
-			<Typography variant="body2" align="justify" gutterBottom>
-				Here are a few technologies I have both worked, learned, and know:
-			</Typography>
 			<div className={classes.layout}>
 				<div className={classes.headerColumn}>
-					Proficient
+					Experienced
 				</div>
 				<div className={classes.skillPos}>
-					{props.skillData.profSkill.map(skill => (
+					{props.skillData.experiencedSkill.map(skill => (
 						<Tooltip title={skill.name}>
 							<img src={"./tech/" + skill.logo} alt={skill.name} className={classes.logo} />
 						</Tooltip>

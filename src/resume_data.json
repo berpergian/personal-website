@@ -1,175 +1,185 @@
 {
-    "name": "Muhammad Ganjar Imanudin",
-    "photo": "/ProfilePicture.jpg",
-    "summaryBio": "Hi! I'm fresh graduated software engineer from Bandung State of Polytechnic in Bandung, Indonesia. Interest in developing front-end website.",
-    "socialMedia":
-    {
-        "email": "mailto:emailmganjar@gmail.com",
-        "github": "https://github.com/berpergian",
-        "twitter": "https://twitter.com/muh_ganjar",
-        "linkedin": "https://www.linkedin.com/in/muhganjar/"
-    },
-    "skills":
-    {
-        "profSkill":
-        [
-            {
-                "name": "HTML & CSS",
-                "logo": "htmlcss.jpg"
-            },
-            {
-                "name": "Javascript",
-                "logo": "js.png"
-            }
-        ],
-        "learnSkill":
-        [
-            {
-                "name": "ReactJS",
-                "logo": "react.png"
-            },
-            {
-                "name": "AngularJS",
-                "logo": "angularjs.png"
-            },
-            {
-                "name": "PHP",
-                "logo": "php.png"
-            },
-            {
-                "name": "CodeIgniter",
-                "logo": "codeigniter.png"
-            },
-            {
-                "name": "Phalcon",
-                "logo": "phalcon.png"
-            },
-            {
-                "name": "Python",
-                "logo": "python.png"
-            },
-            {
-                "name": "MySQL",
-                "logo": "mysql.png"
-            }
-        ],
-        "knowSkill":
-        [
-            {
-                "name": "Git",
-                "logo": "git.png"
-            },
-            {
-                "name": "Github",
-                "logo": "github.png"
-            },
-            {
-                "name": "ExpressJS",
-                "logo": "expressjs.png"
-            }
-        ],
-        "others":
-        [
-            "Microservices",
-            "Data Analytics",
-            "Machine Learning"
-        ]
-    },
-    "experience":
+  "name": "Muhammad Ganjar Imanudin",
+  "photo": "/ProfilePicture.jpg",
+  "summaryBio": "Software developer with two years’ experience in developing scalable web application. Having experience focused develop in back-end side and would jump any opportunity to continue growing my skills in back-end side",
+  "socialMedia":
+  {
+    "email": "mailto:emailmganjar@gmail.com",
+    "github": "https://github.com/berpergian",
+    "twitter": "https://twitter.com/muh_ganjar",
+    "linkedin": "https://www.linkedin.com/in/muhganjar/"
+  },
+  "skills":
+  {
+    "experiencedSkill":
     [
-        {
-            "start": "November 2017",
-            "end": "January 2018",
-            "position": "Front-End Developer",
-            "company": "Ciptadra Softindo",
-            "site": "https://ciptadrasoft.com/",
-            "location": "Depok",
-            "logo": "ciptadra.png",
-            "descJob":
-            [
-                "Continue develop integrating data with back-end developer to presenting data neatly"
-            ]
-        },
-        {
-            "start": "July 2017",
-            "end": "November 2017",
-            "position": "Front-End Dev Intern",
-            "company": "Ciptadra Softindo",
-            "site": "https://ciptadrasoft.com/",
-            "location": "Depok",
-            "logo": "ciptadra.png",
-            "descJob":
-            [
-                "Design and Develop Admin Dashboard website for city government using Phalcon and Bootstrap framework",
-                "Design and Develop mobile version of Admin Dashboard website for city government website in Android "
-            ]
-        }
+      {
+        "name": "HTML & CSS",
+        "logo": "htmlcss.jpg"
+      },
+      {
+        "name": "Javascript",
+        "logo": "js.png"
+      },
+      {
+        "name": "Ruby",
+        "logo": "ruby.png"
+      },
+      {
+        "name": "Rails",
+        "logo": "rails.png"
+      },
+      {
+        "name": "PHP",
+        "logo": "php.png"
+      },
+      {
+        "name": "CodeIgniter",
+        "logo": "codeigniter.png"
+      }
     ],
-    "portofolio":
+    "learnSkill":
     [
-        {
-            "title": "Depok Datawarehouse",
-            "description": "Website which provides information from reports and data on each operational of the local government of Depok to the governor",
-            "image": "depokdwweb.png",
-            "site": "",
-            "github": "",
-            "tech":
-            [
-                "PHP",
-                "Phalcon",
-                "Data Visualization"
-            ]
-        },
-        {
-            "title": "Depok Single Window",
-            "description": "Mobile app which provides centralization of local government services to Depok residents",
-            "image": "",
-            "site": "",
-            "github": "",
-            "tech":
-            [
-                "Java",
-                "Android",
-                "WebView"
-            ]
-        },
-        {
-            "title": "Online Shop Website",
-            "description": "(Unfinished) Online Shop Website using Angular2 (ver 2) Framework for web programming course in semester 5",
-            "image": "",
-            "site": "",
-            "github": "https://github.com/berpergian/GhtAngularFrontend",
-            "tech":
-            [
-                "Angular2",
-                "Bootstrap",
-                "Web"
-            ]
-        },
-        {
-            "title": "Mahjong Soul Desktop",
-            "description": "(Unofficial) Dekstop version of Mahjong Soul English Game for Windows",
-            "image": "mjsoul.png",
-            "site": "",
-            "github": "https://github.com/berpergian/MahjongSoul-Dekstop",
-            "tech":
-            [
-                "ElectronJS",
-                "WebView"
-            ]
-        },
-        {
-            "title": "To the 100",
-            "description": "Snakes and ladders board game using C language",
-            "image": "",
-            "site": "",
-            "github": "https://github.com/berpergian/Gotta-Get-the-Gold",
-            "tech":
-            [
-                "C",
-                "Array 2D",
-                "Data structure"
-            ]
-        }
+      {
+        "name": "ReactJS",
+        "logo": "react.png"
+      },
+      {
+        "name": "Phalcon",
+        "logo": "phalcon.png"
+      },
+      {
+        "name": "Python",
+        "logo": "python.png"
+      },
+      {
+        "name": "MySQL",
+        "logo": "mysql.png"
+      },
+      {
+        "name": "PostgreSQL",
+        "logo": "postgresql.png"
+      },
+      {
+        "name": "Git",
+        "logo": "git.png"
+      },
+      {
+        "name": "Github",
+        "logo": "github.png"
+      }
+    ],
+    "knowSkill":
+    [
+      {
+        "name": "ExpressJS",
+        "logo": "expressjs.png"
+      }
+    ],
+    "others":
+    [
+      "Microservices",
+      "Data Analytics",
+      "Machine Learning"
     ]
+  },
+  "experience":
+  [
+    {
+      "start": "December 2019",
+      "end": "Present",
+      "position": "Full-Stack Web Developer",
+      "company": "Agate International",
+      "site": "https://agate.id/",
+      "location": "Bandung",
+      "logo": "agate.png",
+      "descJob":
+      [
+        "Develop front-end admin dashboard for gamified learning apps and back-end its systems using Ruby on Rails with team of 5 developers",
+        "Develop REST API for communicate between back-end and front-end application using Grape (a framework API for Ruby)",
+        "Maintained systems for 5 different clients"
+      ]
+    },
+    {
+      "start": "July 2017",
+      "end": "January 2018",
+      "position": "Front-End Programmer",
+      "company": "Ciptadra Softindo",
+      "site": "https://ciptadrasoft.com/",
+      "location": "Depok",
+      "logo": "ciptadra.png",
+      "descJob":
+      [
+        "Design and develop admin dashboard for city government using Phalcon as front-end & Bootstrap as CSS framework.",
+        "Design and develop mobile version of admin dashboard in Android using web-view"
+      ]
+    }
+  ],
+  "portofolio":
+  [
+    {
+      "title": "Depok Datawarehouse",
+      "description": "Website which provides information from reports and data on each operational of the local government of Depok to the governor",
+      "image": "",
+      "site": "",
+      "github": "",
+      "tech":
+      [
+        "PHP",
+        "Phalcon",
+        "Data Visualization"
+      ]
+    },
+    {
+      "title": "Depok Single Window",
+      "description": "Mobile app which provides centralization of local government services to Depok residents",
+      "image": "",
+      "site": "",
+      "github": "",
+      "tech":
+      [
+        "Java",
+        "Android",
+        "WebView"
+      ]
+    },
+    {
+      "title": "Online Shop Website",
+      "description": "(Unfinished) Online Shop Website using Angular2 (ver 2) Framework for web programming course in semester 5",
+      "image": "",
+      "site": "",
+      "github": "https://github.com/berpergian/GhtAngularFrontend",
+      "tech":
+      [
+        "Angular2",
+        "Bootstrap",
+        "Web"
+      ]
+    },
+    {
+      "title": "Mahjong Soul Desktop",
+      "description": "(Unofficial) Dekstop version of Mahjong Soul English Game for Windows",
+      "image": "mjsoul.png",
+      "site": "",
+      "github": "https://github.com/berpergian/MahjongSoul-Dekstop",
+      "tech":
+      [
+        "ElectronJS",
+        "WebView"
+      ]
+    },
+    {
+      "title": "To the 100",
+      "description": "Snakes and ladders board game using C language",
+      "image": "",
+      "site": "",
+      "github": "https://github.com/berpergian/Gotta-Get-the-Gold",
+      "tech":
+      [
+        "C",
+        "Array 2D",
+        "Data structure"
+      ]
+    }
+  ]
 }
