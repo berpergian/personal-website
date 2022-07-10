@@ -36,6 +36,10 @@
       {
         "name": "CodeIgniter",
         "logo": "codeigniter.png"
+      },
+      {
+        "name": ".NET Core 5",
+        "logo": "netcore.png"
       }
     ],
     "learnSkill":
@@ -86,9 +90,24 @@
   "experience":
   [
     {
-      "start": "December 2019",
+      "start": "February 2022",
       "end": "Present",
-      "position": "Full-Stack Web Developer",
+      "position": "Back End Programmer",
+      "company": "Agate International",
+      "site": "https://agate.id/",
+      "location": "Bandung",
+      "logo": "agate.png",
+      "descJob":
+      [
+        "Develop back-end side for a B2B project using .NET Core 5 with team of 6 programmers",
+        "Focused on communicate with other system and providing data to front-end side",
+        "Setup and configure scheduled background job for automatic task"
+      ]
+    },
+    {
+      "start": "December 2019",
+      "end": "January 2022",
+      "position": "Full-Stack Web Programmer",
       "company": "Agate International",
       "site": "https://agate.id/",
       "location": "Bandung",
@@ -118,8 +137,22 @@
   "portofolio":
   [
     {
-      "title": "Depok Datawarehouse",
-      "description": "Website which provides information from reports and data on each operational of the local government of Depok to the governor",
+      "title": "B2B Project",
+      "description": "",
+      "image": "",
+      "site": "",
+      "github": "",
+      "tech":
+      [
+        "C#",
+        ".NET Core 5",
+        "Hangfire",
+        "Kubernetes"
+      ]
+    },
+    {
+      "title": "Goverment Project #1",
+      "description": "Website which provides information from reports and data on each operational of the local government to the governor",
       "image": "",
       "site": "",
       "github": "",
@@ -131,8 +164,8 @@
       ]
     },
     {
-      "title": "Depok Single Window",
-      "description": "Mobile app which provides centralization of local government services to Depok residents",
+      "title": "Goverment Project #2",
+      "description": "Mobile app which provides centralization of local government services to city residents",
       "image": "",
       "site": "",
       "github": "",
@@ -154,31 +187,6 @@
         "Angular2",
         "Bootstrap",
         "Web"
-      ]
-    },
-    {
-      "title": "Mahjong Soul Desktop",
-      "description": "(Unofficial) Dekstop version of Mahjong Soul English Game for Windows",
-      "image": "mjsoul.png",
-      "site": "",
-      "github": "https://github.com/berpergian/MahjongSoul-Dekstop",
-      "tech":
-      [
-        "ElectronJS",
-        "WebView"
-      ]
-    },
-    {
-      "title": "To the 100",
-      "description": "Snakes and ladders board game using C language",
-      "image": "",
-      "site": "",
-      "github": "https://github.com/berpergian/Gotta-Get-the-Gold",
-      "tech":
-      [
-        "C",
-        "Array 2D",
-        "Data structure"
       ]
     }
   ]
