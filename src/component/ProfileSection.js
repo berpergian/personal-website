@@ -1,88 +1,94 @@
-/* Libraries */
 import React from 'react';
-import Button from '@material-ui/core/Button';
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import { makeStyles } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
-import Divider from '@material-ui/core/Divider';
-import Tooltip from '@material-ui/core/Tooltip';
+import Button from '@mui/material/Button';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Typography from '@mui/material/Typography';
+import Divider from '@mui/material/Divider';
+import Tooltip from '@mui/material/Tooltip';
+import IconButton from '@mui/material/IconButton';
 
 /* Icons */
-import IconButton from '@material-ui/core/IconButton';
-import GitHubIcon from '@material-ui/icons/GitHub';
-import EmailIcon from '@material-ui/icons/Email';
-import TwitterIcon from '@material-ui/icons/Twitter';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import EmailIcon from '@mui/icons-material/Email';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
-const useStyles = makeStyles(theme => ({
-	button: {
-		margin: theme.spacing(1),
-	},
-	card: {
-		display: 'flex',
-		flexDirection: 'column'
-	},
-	cardContent: {
-		flexGrow: 1,
-	},
-	label: {
-		textTransform: 'capitalize',
-	},
-	centerPosition: {
-		textAlign: "center"
-	},
-	nameText: {
-		fontSize: 18
-	}
-}));
+export default function ProfileSection({ resumeData }) {
+  const socialMedia = resumeData.socialMedia;
 
-export default function ProfileSection(props) {
-	const classes = useStyles();
-	const socialMedia = props.resumeData.socialMedia;
-
-	return (
-		<Card className={classes.card} elevation={0}>
-			<CardMedia component="img" image={props.resumeData.photo} title="Profile Picture" />
-		    <CardContent classes={classes.cardContent}>
-		      <Typography classes={{h6: classes.nameText}} variant="h6" gutterBottom component="h2">{props.resumeData.name}</Typography>
-		      <Typography variant="body2" gutterBottom color="textSecondary" component="p">
-		        {props.resumeData.summaryBio}
-		      </Typography>
-		      <Divider/>
-		      <div className={classes.centerPosition}>
-		      	<Tooltip title="Email">
-			      	<IconButton target="_blank" href={socialMedia.email}>
-			      		<EmailIcon />
-			      	</IconButton>
-				</Tooltip>
-				<Tooltip title="GitHub">
-					<IconButton target="_blank" href={socialMedia.github}>
-					<GitHubIcon />
-					</IconButton>
-				</Tooltip>
-				<Tooltip title="Twitter">
-					<IconButton target="_blank" href={socialMedia.twitter}>
-					<TwitterIcon />
-					</IconButton>
-				</Tooltip>
-				<Tooltip title="LinkedIn">
-					<IconButton target="_blank" href={socialMedia.linkedin}>
-					<LinkedInIcon />
-					</IconButton>
-				</Tooltip>
-				</div>
-		      <Divider/>
-		      <div className={classes.centerPosition}>
-			      <Button variant="contained" classes={{root:classes.button,label: classes.label,}} href="/Resume.pdf" target="_blank">
-			      		My Resume
-			      </Button>
-			      <Button variant="contained" classes={{root:classes.button,label: classes.label,}} href={socialMedia.email}>
-			      		Hire Me!
-			      </Button>
-			  </div>
-		    </CardContent>
-		</Card>
-	)
+  return (
+    <Card
+      elevation={0}
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+      }}
+    >
+      <CardMedia
+        component="img"
+        image={resumeData.photo}
+        title="Profile Picture"
+      />
+      <CardContent sx={{ flexGrow: 1 }}>
+        <Typography
+          variant="h6"
+          gutterBottom
+          component="h2"
+          sx={{ fontSize: 18, textAlign: 'center' }}
+        >
+          {resumeData.name}
+        </Typography>
+        <Typography
+          variant="body2"
+          gutterBottom
+          color="textSecondary"
+          sx={{ textAlign: 'center' }}
+        >
+          {resumeData.summaryBio}
+        </Typography>
+        <Divider sx={{ my: 2 }} />
+        <div style={{ textAlign: 'center' }}>
+          <Tooltip title="Email">
+            <IconButton target="_blank" href={socialMedia.email}>
+              <EmailIcon />
+            </IconButton>
+          </Tooltip>
+          <Tooltip title="GitHub">
+            <IconButton target="_blank" href={socialMedia.github}>
+              <GitHubIcon />
+            </IconButton>
+          </Tooltip>
+          <Tooltip title="Twitter">
+            <IconButton target="_blank" href={socialMedia.twitter}>
+              <TwitterIcon />
+            </IconButton>
+          </Tooltip>
+          <Tooltip title="LinkedIn">
+            <IconButton target="_blank" href={socialMedia.linkedin}>
+              <LinkedInIcon />
+            </IconButton>
+          </Tooltip>
+        </div>
+        <Divider sx={{ my: 2 }} />
+        <div style={{ textAlign: 'center' }}>
+          <Button
+            variant="contained"
+            sx={{ m: 1, textTransform: 'capitalize' }}
+            href="/Resume.pdf"
+            target="_blank"
+          >
+            My Resume
+          </Button>
+          <Button
+            variant="contained"
+            sx={{ m: 1, textTransform: 'capitalize' }}
+            href={socialMedia.email}
+          >
+            Hire Me!
+          </Button>
+        </div>
+      </CardContent>
+    </Card>
+  );
 }
