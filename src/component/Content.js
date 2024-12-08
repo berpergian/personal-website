@@ -1,5 +1,5 @@
 import React from 'react';
-import Grid from '@mui/material/Grid2';
+import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import { styled } from '@mui/material/styles';
 import ProfileSection from './ProfileSection';
@@ -15,14 +15,18 @@ const CardGrid = styled(Container)(({ theme }) => ({
 export default function Content() {
   return (
     <CardGrid maxWidth="md">
-      <Grid container spacing={2}>
-        <Grid xs={12} sm={6} md={4}>
+      <Box
+        display="grid"
+        gridTemplateColumns={{ xs: '1fr', sm: '1fr 1fr', md: '1fr 2fr' }}
+        gap={2} // Spacing between grid items
+      >
+        <Box>
           <ProfileSection resumeData={resumeData} />
-        </Grid>
-        <Grid xs={12} sm={6} md={8}>
+        </Box>
+        <Box>
           <ResumeSection resumeData={resumeData} />
-        </Grid>
-      </Grid>
+        </Box>
+      </Box>
     </CardGrid>
   );
 }

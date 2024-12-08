@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import Typography from '@mui/material/Typography';
 import { styled } from '@mui/material/styles';
 import Tabs from '@mui/material/Tabs';
@@ -17,12 +18,7 @@ import CodeIcon from '@mui/icons-material/Code';
 import AssignmentIcon from '@mui/icons-material/Assignment';
 import BusinessIcon from '@mui/icons-material/Business';
 
-interface TabPanelProps {
-  children?: React.ReactNode;
-  index: number;
-  value: number;
-}
-
+/* Styled Components */
 const StyledTabs = styled(Tabs)(({ theme }) => ({
   '& .MuiTabs-indicator': {
     display: 'flex',
@@ -41,12 +37,13 @@ const StyledTab = styled(Tab)(({ theme }) => ({
   color: theme.palette.text.primary,
   fontWeight: theme.typography.fontWeightRegular,
   fontSize: theme.typography.pxToRem(15),
-  marginRight: theme.spacing(1),
+  flexGrow: 1, // Ensure tabs grow equally
+  maxWidth: 'none', // Allow flexibility
 }));
 
-function TabPanel(props: TabPanelProps) {
-  const { children, value, index, ...other } = props;
 
+/* TabPanel Component */
+function TabPanel({ children, value, index, ...other }) {
   return (
     <Typography
       component="div"
@@ -61,17 +58,25 @@ function TabPanel(props: TabPanelProps) {
   );
 }
 
-function a11yProps(index: number) {
+TabPanel.propTypes = {
+  children: PropTypes.node,
+  value: PropTypes.number.isRequired,
+  index: PropTypes.number.isRequired,
+};
+
+/* Accessibility Props */
+function a11yProps(index) {
   return {
     id: `resume-tab-${index}`,
     'aria-controls': `resume-tabpanel-${index}`,
   };
 }
 
-export default function ResumeSection({ resumeData }: { resumeData: any }) {
-  const [value, setValue] = React.useState(0);
+/* Main Component */
+export default function ResumeSection({ resumeData }) {
+  const [value, setValue] = useState(0);
 
-  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+  const handleChange = (event, newValue) => {
     setValue(newValue);
   };
 
@@ -90,7 +95,7 @@ export default function ResumeSection({ resumeData }: { resumeData: any }) {
         onChange={handleChange}
         aria-label="resume tabs"
         variant="scrollable"
-        scrollButtons="auto"
+        scrollButtons="false"
       >
         <StyledTab icon={<CodeIcon />} label="Key Skill" {...a11yProps(0)} />
         <StyledTab icon={<AssignmentIcon />} label="Portfolio" {...a11yProps(1)} />
@@ -109,3 +114,11 @@ export default function ResumeSection({ resumeData }: { resumeData: any }) {
     </Paper>
   );
 }
+
+ResumeSection.propTypes = {
+  resumeData: PropTypes.shape({
+    skills: PropTypes.array.isRequired,
+    portofolio: PropTypes.array.isRequired,
+    experience: PropTypes.array.isRequired,
+  }).isRequired,
+};
