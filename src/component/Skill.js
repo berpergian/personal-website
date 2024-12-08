@@ -1,88 +1,85 @@
-/* Libraries */
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
-import Tooltip from '@material-ui/core/Tooltip';
-import Divider from '@material-ui/core/Divider';
+import { styled } from '@mui/material/styles';
+import Typography from '@mui/material/Typography';
+import Tooltip from '@mui/material/Tooltip';
+import Divider from '@mui/material/Divider';
 
-const useStyles = makeStyles(theme => ({
-	headerColumn: {
-		fontWeight: "bold",
-		lineHeight: '60px'
-	},
-	layout: {
-		display: 'grid',
-		gridTemplateColumns: "auto auto",
-	    '@media only screen and (max-width: 400px)': {
-	      display: 'block'
-	    }
-	},
-	logo: {
-		width: '10%',
-		padding: theme.spacing(0.5),
-	},
-	tag: {
-		display: 'inline-block',
-		backgroundColor: '#e0e0e0',
-		fontSize: 11,
-		margin: '0 5px 2px 0',
-		padding: '3px 5px',
-		borderRadius: 4,
-	},
-	skillPos: {
-		gridColumnStart: 2,
-		gridColumnEnd: 3,
-		textAlign: "right"
-	}
+const HeaderColumn = styled(Typography)(({ theme }) => ({
+  fontWeight: 'bold',
+  lineHeight: '60px',
 }));
 
-export default function Skill(props) {
-	const classes = useStyles();
+const Layout = styled('div')(({ theme }) => ({
+  display: 'grid',
+  gridTemplateColumns: 'auto auto',
+  [theme.breakpoints.down('xs')]: {
+    display: 'block',
+  },
+}));
 
-	return (
-		<div>
-			<div className={classes.layout}>
-				<div className={classes.headerColumn}>
-					Experienced
-				</div>
-				<div className={classes.skillPos}>
-					{props.skillData.experiencedSkill.map(skill => (
-						<Tooltip title={skill.name}>
-							<img src={"./tech/" + skill.logo} alt={skill.name} className={classes.logo} />
-						</Tooltip>
-					))}
-				</div>
-			</div>
-			<Divider style={{ marginTop: 5, marginBottom: 5 }} />
-			<div className={classes.layout}>
-				<div className={classes.headerColumn}>
-					Learn about
-				</div>
-				<div className={classes.skillPos}>
-					{props.skillData.learnSkill.map(skill => (
-						<Tooltip title={skill.name}>
-							<img src={"./tech/" + skill.logo} alt={skill.name} className={classes.logo} />
-						</Tooltip>
-					))}
-				</div>
-			</div>
-			<Divider style={{ marginTop: 5, marginBottom: 5 }} />
-			<div className={classes.layout}>
-				<div className={classes.headerColumn}>
-					Know with
-				</div>
-				<div className={classes.skillPos}>
-					{props.skillData.knowSkill.map(skill => (
-						<Tooltip title={skill.name}>
-							<img src={"./tech/" + skill.logo} alt={skill.name} className={classes.logo} />
-						</Tooltip>
-					))}
-				</div>
-			</div>
-			<Typography style={{ paddingTop: "10px" }}>Other tech interests:</Typography>
-			<div>
-				{props.skillData.others.map(skill => <Typography variant="caption" className={classes.tag}>{skill}</Typography>)}
-			</div>
-		</div>
-	)
+const Logo = styled('img')(({ theme }) => ({
+  width: '10%',
+  padding: theme.spacing(0.5),
+}));
+
+const Tag = styled(Typography)(({ theme }) => ({
+  display: 'inline-block',
+  backgroundColor: '#e0e0e0',
+  fontSize: 11,
+  margin: '0 5px 2px 0',
+  padding: '3px 5px',
+  borderRadius: 4,
+}));
+
+const SkillPos = styled('div')({
+  gridColumnStart: 2,
+  gridColumnEnd: 3,
+  textAlign: 'right',
+});
+
+export default function Skill({ skillData }: { skillData: any }) {
+  return (
+    <div>
+      <Layout>
+        <HeaderColumn variant="h6">Experienced</HeaderColumn>
+        <SkillPos>
+          {skillData.experiencedSkill.map((skill: any, index: number) => (
+            <Tooltip key={index} title={skill.name}>
+              <Logo src={`./tech/${skill.logo}`} alt={skill.name} />
+            </Tooltip>
+          ))}
+        </SkillPos>
+      </Layout>
+      <Divider sx={{ my: 1 }} />
+      <Layout>
+        <HeaderColumn variant="h6">Learn about</HeaderColumn>
+        <SkillPos>
+          {skillData.learnSkill.map((skill: any, index: number) => (
+            <Tooltip key={index} title={skill.name}>
+              <Logo src={`./tech/${skill.logo}`} alt={skill.name} />
+            </Tooltip>
+          ))}
+        </SkillPos>
+      </Layout>
+      <Divider sx={{ my: 1 }} />
+      <Layout>
+        <HeaderColumn variant="h6">Know with</HeaderColumn>
+        <SkillPos>
+          {skillData.knowSkill.map((skill: any, index: number) => (
+            <Tooltip key={index} title={skill.name}>
+              <Logo src={`./tech/${skill.logo}`} alt={skill.name} />
+            </Tooltip>
+          ))}
+        </SkillPos>
+      </Layout>
+      <Typography sx={{ pt: 1 }}>Other tech interests:</Typography>
+      <div>
+        {skillData.others.map((skill: string, index: number) => (
+          <Tag key={index} variant="caption">
+            {skill}
+          </Tag>
+        ))}
+      </div>
+    </div>
+  );
 }

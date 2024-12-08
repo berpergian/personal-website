@@ -1,6 +1,8 @@
 # Personal Website
 
-My Personal website. This website built using ReactJS (create-react-app) + Material-Ui Framework and hosted in [Zeit.co](https://zeit.co/)
+My Personal website.
+
+This website built using ReactJS (create-react-app) + [Material-Ui](https://mui.com/material-ui/) Framework and hosted in [Vercel](https://vercel.com/)
 
 # Acknowledgements
 
