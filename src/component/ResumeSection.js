@@ -53,7 +53,17 @@ function TabPanel({ children, value, index, ...other }) {
       aria-labelledby={`resume-tab-${index}`}
       {...other}
     >
-      {value === index && <Box sx={{ p: 3 }}>{children}</Box>}
+      {value === index && (
+        <Box
+          sx={{
+            p: 3,
+            maxHeight: '55vh',
+            overflowY: 'auto',
+          }}
+        >
+          {children}
+        </Box>
+      )}
     </Typography>
   );
 }
@@ -83,10 +93,10 @@ export default function ResumeSection({ resumeData }) {
   return (
     <Paper
       sx={{
-        overflow: 'auto',
-        flexDirection: 'column',
-        height: '550px',
         display: 'flex',
+        flexDirection: 'column',
+        height: '100%',
+        overflow: 'hidden', // Prevent the parent from scrolling
       }}
       elevation={1}
     >
@@ -95,7 +105,7 @@ export default function ResumeSection({ resumeData }) {
         onChange={handleChange}
         aria-label="resume tabs"
         variant="scrollable"
-        scrollButtons="false"
+        scrollButtons="auto"
       >
         <StyledTab icon={<CodeIcon />} label="Key Skill" {...a11yProps(0)} />
         <StyledTab icon={<AssignmentIcon />} label="Portfolio" {...a11yProps(1)} />

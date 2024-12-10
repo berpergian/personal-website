@@ -97,7 +97,7 @@ export default function Portofolio(props) {
   };
 
   return (
-    <div>
+    <div style={{ maxHeight: '100%', overflowY: 'auto' }}>
       {props.portoData.map((porto, index) => (
         <div key={index}>
           <Layout>

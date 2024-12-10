@@ -43,7 +43,7 @@ const DescParaph = styled(ListItemText)({
 
 export default function Experience({ expData }) {
   return (
-    <div>
+    <div style={{ maxHeight: '100%', overflowY: 'auto' }}>
       {expData.map((exp, index) => (
         <div key={index}>
           <Layout>

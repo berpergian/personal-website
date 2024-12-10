@@ -37,13 +37,13 @@ const SkillPos = styled('div')({
   textAlign: 'right',
 });
 
-export default function Skill({ skillData }: { skillData: any }) {
+export default function Skill({ skillData }) {
   return (
-    <div>
+    <div style={{ maxHeight: '100%', overflowY: 'auto' }}>
       <Layout>
         <HeaderColumn variant="h6">Experienced</HeaderColumn>
         <SkillPos>
-          {skillData.experiencedSkill.map((skill: any, index: number) => (
+          {skillData.experiencedSkill.map((skill, index) => (
             <Tooltip key={index} title={skill.name}>
               <Logo src={`./tech/${skill.logo}`} alt={skill.name} />
             </Tooltip>
@@ -54,27 +54,28 @@ export default function Skill({ skillData }: { skillData: any }) {
       <Layout>
         <HeaderColumn variant="h6">Learn about</HeaderColumn>
         <SkillPos>
-          {skillData.learnSkill.map((skill: any, index: number) => (
+          {skillData.learnSkill.map((skill, index) => (
             <Tooltip key={index} title={skill.name}>
               <Logo src={`./tech/${skill.logo}`} alt={skill.name} />
             </Tooltip>
           ))}
         </SkillPos>
       </Layout>
-      <Divider sx={{ my: 1 }} />
+      {/* This section not really important for now */}
+      {/* <Divider sx={{ my: 1 }} />
       <Layout>
         <HeaderColumn variant="h6">Know with</HeaderColumn>
         <SkillPos>
-          {skillData.knowSkill.map((skill: any, index: number) => (
+          {skillData.knowSkill.map((skill, index) => (
             <Tooltip key={index} title={skill.name}>
               <Logo src={`./tech/${skill.logo}`} alt={skill.name} />
             </Tooltip>
           ))}
         </SkillPos>
-      </Layout>
+      </Layout> */}
       <Typography sx={{ pt: 1 }}>Other tech interests:</Typography>
       <div>
-        {skillData.others.map((skill: string, index: number) => (
+        {skillData.others.map((skill, index) => (
           <Tag key={index} variant="caption">
             {skill}
           </Tag>
