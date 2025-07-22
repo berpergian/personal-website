@@ -1,7 +1,7 @@
 {
   "name": "Muhammad Ganjar Imanudin",
   "photo": "/ProfilePicture.jpg",
-  "summaryBio": "Software developer with two years’ experience in developing scalable web application. Having experience focused develop in back-end side and would jump any opportunity to continue growing my skills in back-end side",
+  "summaryBio": "Software developer with four years’ experience in developing scalable web application. Having experience focused develop in back-end side and would jump any opportunity to continue growing my skills in back-end side",
   "socialMedia": {
     "email": "mailto:emailmganjar@gmail.com",
     "github": "https://github.com/berpergian",
@@ -10,14 +10,6 @@
   },
   "skills": {
     "experiencedSkill": [
-      {
-        "name": "Ruby",
-        "logo": "ruby.png"
-      },
-      {
-        "name": "Rails",
-        "logo": "rails.png"
-      },
       {
         "name": ".NET",
         "logo": "net.png"
@@ -29,13 +21,25 @@
       {
         "name": "PostgreSQL",
         "logo": "postgresql.png"
+      },
+      {
+        "name": "Redis",
+        "logo": "redis.png"
+      },
+      {
+        "name": "RabbitMQ",
+        "logo": "rabbitmq.png"
+      },
+      {
+        "name": "Ruby",
+        "logo": "ruby.png"
+      },
+      {
+        "name": "Rails",
+        "logo": "rails.png"
       }
     ],
     "learnSkill": [
-      {
-        "name": "ReactJS",
-        "logo": "react.png"
-      },
       {
         "name": "Python",
         "logo": "python.png"
@@ -67,8 +71,27 @@
   },
   "experience": [
     {
+      "start": "January 2023",
+      "end": "July 2025",
+      "position": "Back End Programmer",
+      "company": "Confiction Labs",
+      "site": "https://www.confiction.com/",
+      "location": "Bandung",
+      "logo": "confiction_labs.png",
+      "descJob": [
+        "Developed the back-end using .NET 8 with a team of 3 programmers and collaborated with 10+ roles across the game project.",
+        "Implemented player-related data models (e.g., Player Inventory) and persisted them in MongoDB for scalable and structured storage.",
+        "Researched, tested, and implemented MongoDB Sharding to support distributed multi-region data, ensuring optimal data locality and performance.",
+        "Refactored and enhanced Hangfire job system, introducing job tagging and account-based filtering for improved traceability and debugging.",
+        "Reduced background job load on the main back-end by modularizing Hangfire into a standalone project, improving scalability and configuration flexibility.",
+        "Integrated Sentry for application monitoring, utilizing custom issue and transaction tagging to enable faster and more accurate diagnostics.",
+        "Delivered a production-ready game server capable of supporting 1,000+ players during Steam Next Fest November 2024.",
+        "Built CI/CD pipelines to containerize the server app and generate compose scripts, enabling game programmers to test back-end integration independently."
+      ]
+    },
+    {
       "start": "February 2022",
-      "end": "Present",
+      "end": "July 2025",
       "position": "Back End Programmer",
       "company": "Agate International",
       "site": "https://agate.id/",
