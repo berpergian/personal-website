@@ -75,7 +75,7 @@ export default function ProfileSection({ resumeData }) {
           <Button
             variant="contained"
             sx={{ m: 1, textTransform: 'capitalize' }}
-            href="/Resume.pdf"
+            href="/[Resumev2]%20Muhammad%20Ganjar%20Imanudin.pdf"
             target="_blank"
           >
             My Resume
