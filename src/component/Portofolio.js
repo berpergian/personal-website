@@ -108,7 +108,12 @@ export default function Portofolio(props) {
               <div>
                 {porto.site && (
                   <Tooltip title="Site">
-                    <IconButton size="small" target="_blank" href={porto.site}>
+                    <IconButton
+                      size="small"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href={porto.site}
+                    >
                       <WebIcon />
                     </IconButton>
                   </Tooltip>
@@ -119,6 +124,7 @@ export default function Portofolio(props) {
                       style={{ marginRight: 5 }}
                       size="small"
                       target="_blank"
+                      rel="noopener noreferrer"
                       href={porto.github}
                     >
                       <GitHubIcon />

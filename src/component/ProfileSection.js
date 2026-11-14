@@ -50,22 +50,22 @@ export default function ProfileSection({ resumeData }) {
         <Divider sx={{ my: 2 }} />
         <div style={{ textAlign: 'center' }}>
           <Tooltip title="Email">
-            <IconButton target="_blank" href={socialMedia.email}>
+            <IconButton target="_blank" rel="noopener noreferrer" href={socialMedia.email}>
               <EmailIcon />
             </IconButton>
           </Tooltip>
           <Tooltip title="GitHub">
-            <IconButton target="_blank" href={socialMedia.github}>
+            <IconButton target="_blank" rel="noopener noreferrer" href={socialMedia.github}>
               <GitHubIcon />
             </IconButton>
           </Tooltip>
           <Tooltip title="Twitter">
-            <IconButton target="_blank" href={socialMedia.twitter}>
+            <IconButton target="_blank" rel="noopener noreferrer" href={socialMedia.twitter}>
               <TwitterIcon />
             </IconButton>
           </Tooltip>
           <Tooltip title="LinkedIn">
-            <IconButton target="_blank" href={socialMedia.linkedin}>
+            <IconButton target="_blank" rel="noopener noreferrer" href={socialMedia.linkedin}>
               <LinkedInIcon />
             </IconButton>
           </Tooltip>
@@ -77,6 +77,7 @@ export default function ProfileSection({ resumeData }) {
             sx={{ m: 1, textTransform: 'capitalize' }}
             href="/Resume%20-%20Muhammad%20Ganjar%20Imanudin.pdf"
             target="_blank"
+            rel="noopener noreferrer"
           >
             My Resume
           </Button>
