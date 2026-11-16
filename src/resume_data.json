@@ -1,74 +1,54 @@
 {
   "name": "Muhammad Ganjar Imanudin",
+  "title": "Back-End Developer",
+  "headline": ".NET · MongoDB · PostgreSQL",
   "photo": "/ProfilePicture.jpg",
-  "summaryBio": "Software developer with four years’ experience in developing scalable web application. Having experience focused develop in back-end side and would jump any opportunity to continue growing my skills in back-end side",
+  "summaryBio": "Software developer with 5+ years of experience building scalable web applications, focused on back-end development and always eager to keep growing my back-end skills.",
   "socialMedia": {
     "email": "mailto:emailmganjar@gmail.com",
     "github": "https://github.com/berpergian",
-    "twitter": "https://twitter.com/muh_ganjar",
+    "x": "https://x.com/muh_ganjar",
     "linkedin": "https://www.linkedin.com/in/muhganjar/"
   },
-  "skills": {
-    "experiencedSkill": [
-      {
-        "name": ".NET",
-        "logo": "net.png"
-      },
-      {
-        "name": "MongoDB",
-        "logo": "mongodb.png"
-      },
-      {
-        "name": "PostgreSQL",
-        "logo": "postgresql.png"
-      },
-      {
-        "name": "Redis",
-        "logo": "redis.png"
-      },
-      {
-        "name": "RabbitMQ",
-        "logo": "rabbitmq.png"
-      },
-      {
-        "name": "Ruby",
-        "logo": "ruby.png"
-      },
-      {
-        "name": "Rails",
-        "logo": "rails.png"
-      }
-    ],
-    "learnSkill": [
-      {
-        "name": "Python",
-        "logo": "python.png"
-      },
-      {
-        "name": "MySQL",
-        "logo": "mysql.png"
-      },
-      {
-        "name": "Git",
-        "logo": "git.png"
-      },
-      {
-        "name": "Github",
-        "logo": "github.png"
-      }
-    ],
-    "knowSkill": [
-      {
-        "name": "ExpressJS",
-        "logo": "expressjs.png"
-      }
-    ],
-    "others": [
-      "Microservices",
-      "Data Analytics",
-      "Machine Learning"
-    ]
-  },
+  "skills": [
+    {
+      "category": "Languages",
+      "items": ["C#", "Ruby", "Python", "JavaScript", "SQL"]
+    },
+    {
+      "category": "Back-end",
+      "items": [".NET / ASP.NET Core", "Ruby on Rails", "Grape", "Hangfire"]
+    },
+    {
+      "category": "Databases & Caching",
+      "items": ["MongoDB (incl. sharding)", "PostgreSQL", "MySQL", "Redis"]
+    },
+    {
+      "category": "Messaging",
+      "items": ["RabbitMQ"]
+    },
+    {
+      "category": "DevOps & Infrastructure",
+      "items": ["Docker", "Docker Compose", "Kubernetes", "CI/CD", "Git"]
+    },
+    {
+      "category": "Monitoring",
+      "items": ["Sentry"]
+    },
+    {
+      "category": "AI-Assisted Development",
+      "items": ["Claude Code"],
+      "note": "Used for repetitive and boilerplate code, and as an assistant to cross-check requirement docs, designs and the actual code. All generated code goes through my own review to meet the project's criteria and quality standards."
+    },
+    {
+      "category": "Practices",
+      "items": ["REST API design", "Microservices", "Background jobs", "Multi-region data"]
+    },
+    {
+      "category": "Interests",
+      "items": ["Data Analytics", "Machine Learning"]
+    }
+  ],
   "experience": [
     {
       "start": "January 2023",
@@ -78,14 +58,15 @@
       "site": "https://www.confiction.com/",
       "location": "Bandung",
       "logo": "confiction_labs.png",
+      "note": "Subsidiary of Agate International",
       "descJob": [
-        "Developed the back-end using .NET 8 with a team of 3 programmers and collaborated with 10+ roles across the game project.",
+        "Developed the back-end for RIFTSTORM, a co-op PvE looter-shooter on Steam, using .NET 8 in a team of 3 programmers and collaborating with 10+ roles across the game project.",
         "Implemented player-related data models (e.g., Player Inventory) and persisted them in MongoDB for scalable and structured storage.",
         "Researched, tested, and implemented MongoDB Sharding to support distributed multi-region data, ensuring optimal data locality and performance.",
         "Refactored and enhanced Hangfire job system, introducing job tagging and account-based filtering for improved traceability and debugging.",
         "Reduced background job load on the main back-end by modularizing Hangfire into a standalone project, improving scalability and configuration flexibility.",
         "Integrated Sentry for application monitoring, utilizing custom issue and transaction tagging to enable faster and more accurate diagnostics.",
-        "Delivered a production-ready game server capable of supporting 1,000+ players during Steam Next Fest November 2024.",
+        "Delivered a production-ready game server capable of supporting 1,000+ players during Steam Next Fest in June 2025.",
         "Built CI/CD pipelines to containerize the server app and generate compose scripts, enabling game programmers to test back-end integration independently."
       ]
     },
@@ -98,10 +79,10 @@
       "location": "Bandung",
       "logo": "agate.png",
       "descJob": [
-        "Joined multiple projects across different client sectors",
-        "Focused on communicating with other systems and providing data to the front-end",
-        "Monitored and maintained deployment servers",
-        "Primarily worked with a tech stack that includes .NET 8, MongoDB, and PostgreSQL"
+        "Worked on multiple projects for clients across different sectors.",
+        "Focused on integrating with external systems and providing data to the front-end.",
+        "Monitored and maintained deployment servers.",
+        "Worked primarily with .NET 8, MongoDB, and PostgreSQL."
       ]
     },
     {
@@ -113,9 +94,9 @@
       "location": "Bandung",
       "logo": "agate.png",
       "descJob": [
-        "Develop front-end admin dashboard for gamified learning apps and back-end its systems using Ruby on Rails with team of 5 developers",
-        "Develop REST API for communicate between back-end and front-end application using Grape (a framework API for Ruby)",
-        "Maintained systems for 5 different clients"
+        "Developed the front-end admin dashboard and back-end systems for gamified learning apps using Ruby on Rails in a team of 5 developers.",
+        "Developed REST APIs for communication between the back-end and front-end using Grape (a Ruby API framework).",
+        "Maintained systems for 5 different clients."
       ]
     },
     {
@@ -127,23 +108,32 @@
       "location": "Depok",
       "logo": "ciptadra.png",
       "descJob": [
-        "Design and develop admin dashboard for city government using Phalcon as front-end & Bootstrap as CSS framework.",
-        "Design and develop mobile version of admin dashboard in Android using web-view"
+        "Designed and developed an admin dashboard for a city government using Phalcon and Bootstrap.",
+        "Designed and developed a mobile version of the admin dashboard for Android using WebView."
       ]
     }
   ],
-  "portofolio": [
+  "portfolio": [
     {
-      "title": "Game Project",
-      "description": "Developed the backend for a Unity game project, integrating with the game to save data to the database",
-      "image": "",
-      "site": "",
+      "title": "RIFTSTORM",
+      "role": "Back-End Programmer · Confiction Labs",
+      "description": "Co-op PvE looter-shooter ARPG for PC, now in Steam Early Access. Built the game's back-end services in .NET 8 and MongoDB, covering player data and inventory, sharded multi-region storage and background jobs, and kept the game server stable for 1,000+ players during Steam Next Fest in June 2025.",
+      "image": "riftstorm/header.jpg",
+      "gallery": [
+        "riftstorm/screenshot-1.jpg",
+        "riftstorm/screenshot-2.jpg",
+        "riftstorm/screenshot-3.jpg"
+      ],
+      "site": "https://www.playriftstorm.com/",
+      "steam": "https://store.steampowered.com/app/2282790/RIFTSTORM/",
       "github": "",
       "tech": [
         "C#",
         ".NET 8",
-        "Hangfire",
         "MongoDB",
+        "Hangfire",
+        "Sentry",
+        "Docker",
         "Kubernetes"
       ]
     },
@@ -161,8 +151,8 @@
       ]
     },
     {
-      "title": "Goverment Project #1",
-      "description": "Website which provides information from reports and data on each operational of the local government to the governor",
+      "title": "Government Project #1",
+      "description": "Website that presents reports and operational data from each local government unit to the governor.",
       "image": "",
       "site": "",
       "github": "",
@@ -173,8 +163,8 @@
       ]
     },
     {
-      "title": "Goverment Project #2",
-      "description": "Mobile app which provides centralization of local government services to city residents",
+      "title": "Government Project #2",
+      "description": "Mobile app that centralizes local government services for city residents.",
       "image": "",
       "site": "",
       "github": "",
@@ -186,12 +176,12 @@
     },
     {
       "title": "Online Shop Website",
-      "description": "(Unfinished) Online Shop Website using Angular2 (ver 2) Framework for web programming course in semester 5",
+      "description": "(Unfinished) Online shop website built with Angular 2 for a 5th-semester web programming course.",
       "image": "",
       "site": "",
       "github": "https://github.com/berpergian/GhtAngularFrontend",
       "tech": [
-        "Angular2",
+        "Angular 2",
         "Bootstrap",
         "Web"
       ]

@@ -4,30 +4,29 @@ import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
 import { styled } from '@mui/material/styles';
 
-/* Styled Footer */
+/* Solid dark strip: readable on top of any part of the background photo */
 const FooterContainer = styled('footer')(({ theme }) => ({
   marginTop: 'auto',
-  backgroundColor: 'white',
-  opacity: 0.6,
-  transition: 'all ease 400ms',
-  '&:hover': {
-    opacity: 1,
-  },
-  [theme.breakpoints.down('md')]: {
-    opacity: 1,
-  },
+  backgroundColor: 'rgba(15, 23, 32, 0.92)',
+  color: 'rgba(255, 255, 255, 0.85)',
+  padding: theme.spacing(1.5, 0),
 }));
 
 export default function Footer() {
   return (
     <FooterContainer>
       <Container maxWidth="sm">
-        <Typography variant="body2" color="textSecondary" align="center">
-          © Muhammad Ganjar Imanudin 2024
+        <Typography variant="body2" align="center">
+          © Muhammad Ganjar Imanudin {new Date().getFullYear()}
         </Typography>
-        <Typography variant="body2" color="textSecondary" align="center">
-          Background Photo by{' '}
-          <Link color="inherit" href="https://unsplash.com/photos/IocJwyqRv3M">
+        <Typography variant="body2" align="center" sx={{ opacity: 0.75 }}>
+          Background photo by{' '}
+          <Link
+            color="inherit"
+            href="https://unsplash.com/photos/IocJwyqRv3M"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Louie Martinez
           </Link>{' '}
           on Unsplash

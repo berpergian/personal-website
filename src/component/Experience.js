@@ -15,21 +15,20 @@ import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 /* Styled Components */
 const Layout = styled('div')(({ theme }) => ({
   display: 'grid',
-  gridTemplateColumns: 'auto 100px',
-  [theme.breakpoints.down('xs')]: {
-    display: 'block',
+  gridTemplateColumns: 'minmax(0, 1fr) 100px',
+  columnGap: theme.spacing(2),
+  // Phones keep the logo beside the title, just smaller
+  [theme.breakpoints.down('sm')]: {
+    gridTemplateColumns: 'minmax(0, 1fr) 56px',
+    columnGap: theme.spacing(1.5),
   },
 }));
 
-const Logo = styled('img')(({ theme }) => ({
-  maxWidth: 100,
+const Logo = styled('img')({
+  maxWidth: '100%',
   maxHeight: 100,
   borderRadius: 5,
-  [theme.breakpoints.down('xs')]: {
-    maxWidth: '80%',
-    maxHeight: '80%',
-  },
-}));
+});
 
 const LogoGrid = styled('div')({
   textAlign: 'right',
@@ -43,23 +42,37 @@ const DescParaph = styled(ListItemText)({
 
 export default function Experience({ expData }) {
   return (
-    <div style={{ maxHeight: '100%', overflowY: 'auto' }}>
+    <div>
       {expData.map((exp, index) => (
         <div key={index}>
           <Layout>
             <div>
               <Typography style={{ fontWeight: 'bold' }}>
                 {exp.position} @{' '}
-                <Link style={{ color: '#5B6973AA' }} href={exp.site}>
+                <Link
+                  style={{ color: '#5B6973AA' }}
+                  href={exp.site}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   {exp.company}
                 </Link>
               </Typography>
               <Typography variant="caption" style={{ color: '#5B6973AA' }}>
                 {exp.location}, {exp.start} - {exp.end}
               </Typography>
+              {exp.note && (
+                <Typography
+                  variant="caption"
+                  component="div"
+                  style={{ color: '#5B6973AA', fontStyle: 'italic' }}
+                >
+                  {exp.note}
+                </Typography>
+              )}
             </div>
             <LogoGrid>
-              <Logo src={`./company/${exp.logo}`} alt={exp.name} />
+              <Logo src={`./company/${exp.logo}`} alt={exp.company} />
             </LogoGrid>
             <div style={{ gridColumn: '1 / 3' }}>
               <List>
