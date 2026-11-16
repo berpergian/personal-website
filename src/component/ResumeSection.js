@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import Typography from '@mui/material/Typography';
 import { styled } from '@mui/material/styles';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
@@ -10,7 +9,7 @@ import Divider from '@mui/material/Divider';
 
 /* Pages */
 import Skill from './Skill';
-import Portofolio from './Portofolio';
+import Portfolio from './Portfolio';
 import Experience from './Experience';
 
 /* Icons */
@@ -21,14 +20,7 @@ import BusinessIcon from '@mui/icons-material/Business';
 /* Styled Components */
 const StyledTabs = styled(Tabs)(({ theme }) => ({
   '& .MuiTabs-indicator': {
-    display: 'flex',
-    justifyContent: 'center',
-    backgroundColor: 'transparent',
-    '& > div': {
-      maxWidth: 40,
-      width: '100%',
-      backgroundColor: theme.palette.primary.main,
-    },
+    backgroundColor: theme.palette.primary.main,
   },
 }));
 
@@ -37,34 +29,27 @@ const StyledTab = styled(Tab)(({ theme }) => ({
   color: theme.palette.text.primary,
   fontWeight: theme.typography.fontWeightRegular,
   fontSize: theme.typography.pxToRem(15),
-  flexGrow: 1, // Ensure tabs grow equally
-  maxWidth: 'none', // Allow flexibility
+  minHeight: 64,
+  minWidth: 0,
+  [theme.breakpoints.down('sm')]: {
+    fontSize: theme.typography.pxToRem(14),
+    padding: theme.spacing(1, 0.5),
+  },
 }));
 
-
 /* TabPanel Component */
-function TabPanel({ children, value, index, ...other }) {
+function TabPanel({ children, value, index }) {
   return (
-    <Typography
-      component="div"
+    <div
       role="tabpanel"
       hidden={value !== index}
       id={`resume-tabpanel-${index}`}
       aria-labelledby={`resume-tab-${index}`}
-      {...other}
     >
       {value === index && (
-        <Box
-          sx={{
-            p: 3,
-            maxHeight: '55vh',
-            overflowY: 'auto',
-          }}
-        >
-          {children}
-        </Box>
+        <Box sx={{ px: { xs: 2, sm: 3 }, py: { xs: 2, sm: 3 } }}>{children}</Box>
       )}
-    </Typography>
+    </div>
   );
 }
 
@@ -82,44 +67,44 @@ function a11yProps(index) {
   };
 }
 
+/* Tab order; the names double as URL hashes, e.g. /#portfolio */
+const TAB_HASHES = ['experience', 'skills', 'portfolio'];
+
+function initialTab() {
+  const index = TAB_HASHES.indexOf(window.location.hash.replace('#', ''));
+  return index === -1 ? 0 : index;
+}
+
 /* Main Component */
 export default function ResumeSection({ resumeData }) {
-  const [value, setValue] = useState(0);
+  const [value, setValue] = useState(initialTab);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
+    window.history.replaceState(null, '', `#${TAB_HASHES[newValue]}`);
   };
 
   return (
-    <Paper
-      sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        height: '100%',
-        overflow: 'hidden', // Prevent the parent from scrolling
-      }}
-      elevation={1}
-    >
+    <Paper elevation={1} sx={{ borderRadius: 2, overflow: 'hidden' }}>
       <StyledTabs
         value={value}
         onChange={handleChange}
         aria-label="resume tabs"
-        variant="scrollable"
-        scrollButtons="auto"
+        variant="fullWidth"
       >
-        <StyledTab icon={<CodeIcon />} label="Key Skill" {...a11yProps(0)} />
-        <StyledTab icon={<AssignmentIcon />} label="Portfolio" {...a11yProps(1)} />
-        <StyledTab icon={<BusinessIcon />} label="Experience" {...a11yProps(2)} />
+        <StyledTab icon={<BusinessIcon />} label="Experience" {...a11yProps(0)} />
+        <StyledTab icon={<CodeIcon />} label="Skills" {...a11yProps(1)} />
+        <StyledTab icon={<AssignmentIcon />} label="Portfolio" {...a11yProps(2)} />
       </StyledTabs>
       <Divider />
       <TabPanel value={value} index={0}>
-        <Skill skillData={resumeData.skills} />
+        <Experience expData={resumeData.experience} />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <Portofolio portoData={resumeData.portofolio} />
+        <Skill skillData={resumeData.skills} />
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <Experience expData={resumeData.experience} />
+        <Portfolio portfolioData={resumeData.portfolio} />
       </TabPanel>
     </Paper>
   );
@@ -128,7 +113,7 @@ export default function ResumeSection({ resumeData }) {
 ResumeSection.propTypes = {
   resumeData: PropTypes.shape({
     skills: PropTypes.array.isRequired,
-    portofolio: PropTypes.array.isRequired,
+    portfolio: PropTypes.array.isRequired,
     experience: PropTypes.array.isRequired,
   }).isRequired,
 };

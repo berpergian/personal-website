@@ -1,16 +1,20 @@
 .App {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
+  position: relative;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  min-height: 100dvh;
 }
 
-@media (min-width: 650px ) {
-  .App {
-    height: 100vh;
-    background-position: center center;
-  }
+/* Background on its own fixed layer: background-attachment: fixed is ignored
+   on iOS Safari, which would stretch the photo over the whole page height. */
+.App::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-color: #1d2b3a;
+  background-image: url('https://images.unsplash.com/photo-1513407030348-c983a97b98d8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1504&q=80');
+  background-size: cover;
+  background-position: center center;
 }

@@ -1,86 +1,72 @@
 import React from 'react';
 import { styled } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
-import Tooltip from '@mui/material/Tooltip';
+import Chip from '@mui/material/Chip';
 import Divider from '@mui/material/Divider';
+import BrandIcon, { hasBrandIcon } from './BrandIcon';
 
-const HeaderColumn = styled(Typography)(({ theme }) => ({
-  fontWeight: 'bold',
-  lineHeight: '60px',
-}));
-
-const Layout = styled('div')(({ theme }) => ({
+const Row = styled('div')(({ theme }) => ({
   display: 'grid',
-  gridTemplateColumns: 'auto auto',
-  [theme.breakpoints.down('xs')]: {
-    display: 'block',
+  gridTemplateColumns: '170px minmax(0, 1fr)',
+  alignItems: 'baseline',
+  columnGap: theme.spacing(2),
+  padding: theme.spacing(1.25, 0),
+  [theme.breakpoints.down('sm')]: {
+    gridTemplateColumns: 'minmax(0, 1fr)',
+    rowGap: theme.spacing(1),
   },
 }));
 
-const Logo = styled('img')(({ theme }) => ({
-  width: '10%',
-  padding: theme.spacing(0.5),
-}));
-
-const Tag = styled(Typography)(({ theme }) => ({
-  display: 'inline-block',
-  backgroundColor: '#e0e0e0',
-  fontSize: 11,
-  margin: '0 5px 2px 0',
-  padding: '3px 5px',
-  borderRadius: 4,
-}));
-
-const SkillPos = styled('div')({
-  gridColumnStart: 2,
-  gridColumnEnd: 3,
-  textAlign: 'right',
+const Category = styled(Typography)({
+  fontWeight: 'bold',
 });
+
+const Items = styled('div')(({ theme }) => ({
+  display: 'flex',
+  flexWrap: 'wrap',
+  gap: theme.spacing(0.75),
+}));
 
 export default function Skill({ skillData }) {
   return (
-    <div style={{ maxHeight: '100%', overflowY: 'auto' }}>
-      <Layout>
-        <HeaderColumn variant="h6">Experienced</HeaderColumn>
-        <SkillPos>
-          {skillData.experiencedSkill.map((skill, index) => (
-            <Tooltip key={index} title={skill.name}>
-              <Logo src={`./tech/${skill.logo}`} alt={skill.name} />
-            </Tooltip>
-          ))}
-        </SkillPos>
-      </Layout>
-      <Divider sx={{ my: 1 }} />
-      <Layout>
-        <HeaderColumn variant="h6">Learn about</HeaderColumn>
-        <SkillPos>
-          {skillData.learnSkill.map((skill, index) => (
-            <Tooltip key={index} title={skill.name}>
-              <Logo src={`./tech/${skill.logo}`} alt={skill.name} />
-            </Tooltip>
-          ))}
-        </SkillPos>
-      </Layout>
-      {/* This section not really important for now */}
-      {/* <Divider sx={{ my: 1 }} />
-      <Layout>
-        <HeaderColumn variant="h6">Know with</HeaderColumn>
-        <SkillPos>
-          {skillData.knowSkill.map((skill, index) => (
-            <Tooltip key={index} title={skill.name}>
-              <Logo src={`./tech/${skill.logo}`} alt={skill.name} />
-            </Tooltip>
-          ))}
-        </SkillPos>
-      </Layout> */}
-      <Typography sx={{ pt: 1 }}>Other tech interests:</Typography>
-      <div>
-        {skillData.others.map((skill, index) => (
-          <Tag key={index} variant="caption">
-            {skill}
-          </Tag>
-        ))}
-      </div>
+    <div>
+      {skillData.map((group, index) => (
+        <React.Fragment key={group.category}>
+          <Row>
+            <Category variant="body2" component="h3">
+              {group.category}
+            </Category>
+            <div>
+              <Items>
+                {group.items.map((item) => (
+                  <Chip
+                    key={item}
+                    label={item}
+                    size="small"
+                    variant="outlined"
+                    icon={
+                      hasBrandIcon(item) ? (
+                        <BrandIcon name={item} sx={{ fontSize: 14 }} />
+                      ) : undefined
+                    }
+                    sx={{ '& .MuiChip-icon': { ml: '6px', mr: '-2px' } }}
+                  />
+                ))}
+              </Items>
+              {group.note && (
+                <Typography
+                  variant="caption"
+                  component="p"
+                  sx={{ color: 'text.secondary', mt: 1, lineHeight: 1.5 }}
+                >
+                  {group.note}
+                </Typography>
+              )}
+            </div>
+          </Row>
+          {index !== skillData.length - 1 && <Divider />}
+        </React.Fragment>
+      ))}
     </div>
   );
 }

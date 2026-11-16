@@ -1,32 +1,46 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
-import { styled } from '@mui/material/styles';
 import ProfileSection from './ProfileSection';
 import ResumeSection from './ResumeSection';
 const resumeData = require('../resume_data.json');
 
-// Styled Container
-const CardGrid = styled(Container)(({ theme }) => ({
-  paddingTop: theme.spacing(4),
-  paddingBottom: theme.spacing(4),
-}));
-
 export default function Content() {
   return (
-    <CardGrid maxWidth="md">
+    <Container
+      component="main"
+      maxWidth="lg"
+      sx={{ py: { xs: 2, sm: 4 }, px: { xs: 2, sm: 3 } }}
+    >
       <Box
-        display="grid"
-        gridTemplateColumns={{ xs: '1fr', sm: '1fr 1fr', md: '1fr 2fr' }}
-        gap={2} // Spacing between grid items
+        sx={{
+          display: 'grid',
+          // Phones, Surface Duo and portrait tablets: one column.
+          // Landscape tablets, laptops and desktops: profile + resume side by side.
+          gridTemplateColumns: {
+            xs: 'minmax(0, 1fr)',
+            md: 'minmax(260px, 1fr) minmax(0, 2.3fr)',
+          },
+          gap: { xs: 2, md: 3 },
+          alignItems: 'start',
+          maxWidth: { xs: 680, md: 'none' },
+          mx: 'auto',
+        }}
       >
-        <Box>
+        <Box
+          sx={{
+            // Keep the profile in view while scrolling, but only when the whole
+            // card fits on screen (short laptop screens would cut off its buttons).
+            '@media (min-width: 900px) and (min-height: 820px)': {
+              position: 'sticky',
+              top: 32,
+            },
+          }}
+        >
           <ProfileSection resumeData={resumeData} />
         </Box>
-        <Box>
-          <ResumeSection resumeData={resumeData} />
-        </Box>
+        <ResumeSection resumeData={resumeData} />
       </Box>
-    </CardGrid>
+    </Container>
   );
 }
