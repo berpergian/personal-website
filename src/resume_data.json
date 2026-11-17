@@ -21,7 +21,7 @@
     },
     {
       "category": "Databases & Caching",
-      "items": ["MongoDB (incl. sharding)", "PostgreSQL", "MySQL", "Redis"]
+      "items": ["MongoDB (incl. sharding)", "PostgreSQL", "MySQL", "Redis", "Firebase"]
     },
     {
       "category": "Messaging",
@@ -80,6 +80,7 @@
       "logo": "agate.png",
       "descJob": [
         "Worked on multiple projects for clients across different sectors.",
+        "Developed the back-end of a fantasy football game for a video-streaming platform client, covering team building, contests, match-based scoring and leaderboards.",
         "Focused on integrating with external systems and providing data to the front-end.",
         "Monitored and maintained deployment servers.",
         "Worked primarily with .NET 8, MongoDB, and PostgreSQL."
@@ -94,9 +95,9 @@
       "location": "Bandung",
       "logo": "agate.png",
       "descJob": [
-        "Developed the front-end admin dashboard and back-end systems for gamified learning apps using Ruby on Rails in a team of 5 developers.",
+        "Developed the admin dashboard and back-end for Levio, Agate's gamified learning platform for corporate clients, using Ruby on Rails, PostgreSQL and Firebase in a team of 5 developers.",
         "Developed REST APIs for communication between the back-end and front-end using Grape (a Ruby API framework).",
-        "Maintained systems for 5 different clients."
+        "Maintained the platform for 5 client tenants."
       ]
     },
     {
@@ -117,8 +118,17 @@
     {
       "title": "RIFTSTORM",
       "role": "Back-End Programmer · Confiction Labs",
-      "description": "Co-op PvE looter-shooter ARPG for PC, now in Steam Early Access. Built the game's back-end services in .NET 8 and MongoDB, covering player data and inventory, sharded multi-region storage and background jobs, and kept the game server stable for 1,000+ players during Steam Next Fest in June 2025.",
+      "summary": "Co-op PvE looter-shooter ARPG for PC, now in Steam Early Access. I built back-end services in .NET 8 and MongoDB that kept the game stable for 1,000+ players during Steam Next Fest in June 2025.",
+      "details": [
+        "Player data models such as inventory, persisted in MongoDB.",
+        "MongoDB sharding for multi-region data locality and performance.",
+        "Hangfire background jobs moved into a standalone service, with job tagging and account-based filtering.",
+        "Sentry monitoring with custom issue and transaction tags for faster diagnostics.",
+        "CI/CD pipelines that containerize the server, so game programmers can test back-end integration on their own."
+      ],
       "image": "riftstorm/header.jpg",
+      "imageFit": "contain",
+      "imageBackground": "#0b0d2b",
       "gallery": [
         "riftstorm/screenshot-1.jpg",
         "riftstorm/screenshot-2.jpg",
@@ -126,65 +136,54 @@
       ],
       "site": "https://www.playriftstorm.com/",
       "steam": "https://store.steampowered.com/app/2282790/RIFTSTORM/",
-      "github": "",
-      "tech": [
-        "C#",
-        ".NET 8",
-        "MongoDB",
-        "Hangfire",
-        "Sentry",
-        "Docker",
-        "Kubernetes"
-      ]
+      "tech": ["C#", ".NET 8", "MongoDB", "Hangfire", "Sentry", "Docker", "Kubernetes"]
     },
     {
-      "title": "B2B Project",
-      "description": "",
-      "image": "",
-      "site": "",
-      "github": "",
-      "tech": [
-        "C#",
-        ".NET 5",
-        "Hangfire",
-        "Kubernetes"
-      ]
+      "title": "Fantasy Football Game (B2B)",
+      "role": "Back-End Programmer · Agate International",
+      "summary": "Skill-based fantasy football game inside a video-streaming app, played alongside live league broadcasts. I built the back-end for team building, contests, match scoring and leaderboards.",
+      "details": [
+        "Users built a team on a fixed credit budget for each match and entered contests.",
+        "Match-based scoring and season-long leaderboards with rank-based prize tiers.",
+        "Hangfire background jobs for processing match results and verifying final standings.",
+        "Built for a B2B client; the game and client stay unnamed under NDA."
+      ],
+      "tech": ["C#", ".NET 5", "Hangfire", "Kubernetes"]
+    },
+    {
+      "title": "Levio",
+      "role": "Full-Stack Web Programmer · Agate International",
+      "summary": "Gamified learning app for Android and iOS from Agate Level Up, used by companies for employee training. I developed the admin dashboard and back-end, and maintained the platform for 5 client tenants.",
+      "details": [
+        "Learners' avatars level up and evolve with experience points earned from missions and courses.",
+        "Admin dashboard and back-end built with Ruby on Rails and PostgreSQL, with Firebase.",
+        "REST APIs for the mobile app built with Grape.",
+        "One platform serving 5 corporate client tenants, each maintained and supported over time."
+      ],
+      "image": "levio/logo.png",
+      "imageBackground": "#ffffff",
+      "imagePadding": "0 14px 10px",
+      "gallery": ["levio/app-home.jpg"],
+      "tech": ["Ruby", "Ruby on Rails", "Grape", "PostgreSQL", "Firebase"]
     },
     {
       "title": "Government Project #1",
-      "description": "Website that presents reports and operational data from each local government unit to the governor.",
-      "image": "",
-      "site": "",
-      "github": "",
-      "tech": [
-        "PHP",
-        "Phalcon",
-        "Data Visualization"
-      ]
+      "role": "Front-End Programmer · Ciptadra Softindo",
+      "summary": "Website that presents reports and operational data from each local government unit to the governor.",
+      "tech": ["PHP", "Phalcon", "Data Visualization"]
     },
     {
       "title": "Government Project #2",
-      "description": "Mobile app that centralizes local government services for city residents.",
-      "image": "",
-      "site": "",
-      "github": "",
-      "tech": [
-        "Java",
-        "Android",
-        "WebView"
-      ]
+      "role": "Front-End Programmer · Ciptadra Softindo",
+      "summary": "Mobile app that centralizes local government services for city residents.",
+      "tech": ["Java", "Android", "WebView"]
     },
     {
       "title": "Online Shop Website",
-      "description": "(Unfinished) Online shop website built with Angular 2 for a 5th-semester web programming course.",
-      "image": "",
-      "site": "",
+      "role": "University project",
+      "summary": "(Unfinished) Online shop website built with Angular 2 for a 5th-semester web programming course.",
       "github": "https://github.com/berpergian/GhtAngularFrontend",
-      "tech": [
-        "Angular 2",
-        "Bootstrap",
-        "Web"
-      ]
+      "tech": ["Angular 2", "Bootstrap", "Web"]
     }
   ]
 }
