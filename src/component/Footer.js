@@ -10,6 +10,11 @@ const FooterContainer = styled('footer')(({ theme }) => ({
   backgroundColor: 'rgba(15, 23, 32, 0.92)',
   color: 'rgba(255, 255, 255, 0.85)',
   padding: theme.spacing(1.5, 0),
+  // Phones: tighter footer so the scrollable tab content gets more room
+  [theme.breakpoints.down('sm')]: {
+    padding: theme.spacing(0.75, 0),
+    '& .MuiTypography-root': { fontSize: '0.75rem', lineHeight: 1.5 },
+  },
 }));
 
 export default function Footer() {

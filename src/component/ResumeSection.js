@@ -37,19 +37,27 @@ const StyledTab = styled(Tab)(({ theme }) => ({
   },
 }));
 
-/* TabPanel Component */
+/* TabPanel Component: the only scrolling area on the page */
 function TabPanel({ children, value, index }) {
+  if (value !== index) return null;
   return (
-    <div
+    <Box
       role="tabpanel"
-      hidden={value !== index}
+      tabIndex={0}
       id={`resume-tabpanel-${index}`}
       aria-labelledby={`resume-tab-${index}`}
+      sx={{
+        flex: 1,
+        minHeight: 0,
+        overflowY: 'auto',
+        overscrollBehavior: 'contain',
+        px: { xs: 2, sm: 3 },
+        py: { xs: 2, sm: 3 },
+        '&:focus-visible': { outline: 'none' },
+      }}
     >
-      {value === index && (
-        <Box sx={{ px: { xs: 2, sm: 3 }, py: { xs: 2, sm: 3 } }}>{children}</Box>
-      )}
-    </div>
+      {children}
+    </Box>
   );
 }
 
@@ -85,8 +93,19 @@ export default function ResumeSection({ resumeData }) {
   };
 
   return (
-    <Paper elevation={1} sx={{ borderRadius: 2, overflow: 'hidden' }}>
+    <Paper
+      elevation={1}
+      sx={{
+        borderRadius: 2,
+        overflow: 'hidden',
+        display: 'flex',
+        flexDirection: 'column',
+        minHeight: 0,
+        height: '100%',
+      }}
+    >
       <StyledTabs
+        sx={{ flex: 'none' }}
         value={value}
         onChange={handleChange}
         aria-label="resume tabs"

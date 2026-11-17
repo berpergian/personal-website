@@ -1,9 +1,21 @@
+/* The app fills exactly one screen; only the tab content scrolls. */
 .App {
   position: relative;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  min-height: 100dvh;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+/* Very short screens (e.g. a phone held sideways) can't fit the profile and
+   the tab content at once, so fall back to normal page scrolling there. */
+@media (max-height: 559px) {
+  .App {
+    height: auto;
+    min-height: 100vh;
+    overflow: visible;
+  }
 }
 
 /* Background on its own fixed layer: background-attachment: fixed is ignored
