@@ -11,6 +11,7 @@ import Divider from '@mui/material/Divider';
 import Skill from './Skill';
 import Portfolio from './Portfolio';
 import Experience from './Experience';
+import { thinBlueScrollbar } from './scrollbar';
 
 /* Icons */
 import CodeIcon from '@mui/icons-material/Code';
@@ -59,15 +60,7 @@ function TabPanel({ children, value, index }) {
           overflowY: 'auto',
           overscrollBehavior: 'contain',
         },
-        // Thin scrollbar in the same blue as the tab underline
-        scrollbarWidth: 'thin',
-        scrollbarColor: `${theme.palette.primary.main} transparent`,
-        '&::-webkit-scrollbar': { width: 6 },
-        '&::-webkit-scrollbar-track': { background: 'transparent' },
-        '&::-webkit-scrollbar-thumb': {
-          backgroundColor: theme.palette.primary.main,
-          borderRadius: 3,
-        },
+        ...thinBlueScrollbar(theme),
       })}
     >
       {children}

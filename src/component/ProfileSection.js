@@ -12,6 +12,7 @@ import EmailIcon from '@mui/icons-material/Email';
 import XIcon from '@mui/icons-material/X';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import DescriptionIcon from '@mui/icons-material/Description';
+import { thinBlueScrollbar } from './scrollbar';
 
 const RESUME_URL = '/Resume%20-%20Muhammad%20Ganjar%20Imanudin.pdf';
 
@@ -33,7 +34,8 @@ export default function ProfileSection({ resumeData }) {
   return (
     <Card
       elevation={1}
-      sx={{
+      sx={(theme) => ({
+        ...thinBlueScrollbar(theme),
         borderRadius: 2,
         display: 'grid',
         alignContent: 'start',
@@ -56,7 +58,7 @@ export default function ProfileSection({ resumeData }) {
         // Short/zoomed screens scroll the page: keep the card its natural
         // height instead of stretching it next to the long tab content
         '@media (max-height: 559px)': { height: 'auto', alignSelf: 'start' },
-      }}
+      })}
     >
       <Box
         component="img"
