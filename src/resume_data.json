@@ -167,23 +167,15 @@
       "tech": ["Ruby", "Ruby on Rails", "Grape", "PostgreSQL", "Firebase"]
     },
     {
-      "title": "Government Project #1",
-      "role": "Front-End Programmer · Ciptadra Softindo",
-      "summary": "Website that presents reports and operational data from each local government unit to the governor.",
-      "tech": ["PHP", "Phalcon", "Data Visualization"]
-    },
-    {
-      "title": "Government Project #2",
-      "role": "Front-End Programmer · Ciptadra Softindo",
-      "summary": "Mobile app that centralizes local government services for city residents.",
-      "tech": ["Java", "Android", "WebView"]
-    },
-    {
-      "title": "Online Shop Website",
-      "role": "University project",
-      "summary": "(Unfinished) Online shop website built with Angular 2 for a 5th-semester web programming course.",
-      "github": "https://github.com/berpergian/GhtAngularFrontend",
-      "tech": ["Angular 2", "Bootstrap", "Web"]
+      "title": "Omnichannel Contact Center Platform",
+      "role": "Front-End Intern · Ciptadra Softindo",
+      "summary": "Enterprise and government platform that brings customer conversations from multiple channels into one place, with ticketing, reports and dashboards. As a front-end intern I enhanced features and connected the interface to back-end data.",
+      "details": [
+        "Built and enhanced front-end features with PHP and the Phalcon framework.",
+        "Fetched data from back-end services and displayed it in pages and dashboards.",
+        "Used Bootstrap for consistent, responsive layouts."
+      ],
+      "tech": ["PHP", "Phalcon", "Bootstrap"]
     }
   ]
 }
