@@ -10,35 +10,36 @@ export default function Content() {
     <Container
       component="main"
       maxWidth="lg"
-      sx={{ py: { xs: 2, sm: 4 }, px: { xs: 2, sm: 3 } }}
+      sx={{
+        flex: 1,
+        minHeight: 0,
+        display: 'flex',
+        py: { xs: 1.5, sm: 2, md: 3 },
+        px: { xs: 1.5, sm: 3 },
+      }}
     >
       <Box
         sx={{
+          flex: 1,
+          minHeight: 0,
+          width: '100%',
           display: 'grid',
-          // Phones, Surface Duo and portrait tablets: one column.
-          // Landscape tablets, laptops and desktops: profile + resume side by side.
+          // Phones, Surface Duo and portrait tablets: compact profile on top,
+          // tab content fills the rest. Landscape tablets and up: side by side.
           gridTemplateColumns: {
             xs: 'minmax(0, 1fr)',
             md: 'minmax(260px, 1fr) minmax(0, 2.3fr)',
           },
-          gap: { xs: 2, md: 3 },
-          alignItems: 'start',
+          gridTemplateRows: {
+            xs: 'auto minmax(0, 1fr)',
+            md: 'minmax(0, 1fr)',
+          },
+          gap: { xs: 1.5, sm: 2, md: 3 },
           maxWidth: { xs: 680, md: 'none' },
           mx: 'auto',
         }}
       >
-        <Box
-          sx={{
-            // Keep the profile in view while scrolling, but only when the whole
-            // card fits on screen (short laptop screens would cut off its buttons).
-            '@media (min-width: 900px) and (min-height: 820px)': {
-              position: 'sticky',
-              top: 32,
-            },
-          }}
-        >
-          <ProfileSection resumeData={resumeData} />
-        </Box>
+        <ProfileSection resumeData={resumeData} />
         <ResumeSection resumeData={resumeData} />
       </Box>
     </Container>

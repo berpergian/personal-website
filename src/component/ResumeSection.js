@@ -11,6 +11,7 @@ import Divider from '@mui/material/Divider';
 import Skill from './Skill';
 import Portfolio from './Portfolio';
 import Experience from './Experience';
+import { thinBlueScrollbar } from './scrollbar';
 
 /* Icons */
 import CodeIcon from '@mui/icons-material/Code';
@@ -37,19 +38,33 @@ const StyledTab = styled(Tab)(({ theme }) => ({
   },
 }));
 
-/* TabPanel Component */
+/* TabPanel Component: the only scrolling area on the page */
 function TabPanel({ children, value, index }) {
+  if (value !== index) return null;
   return (
-    <div
+    <Box
       role="tabpanel"
-      hidden={value !== index}
+      tabIndex={0}
       id={`resume-tabpanel-${index}`}
       aria-labelledby={`resume-tab-${index}`}
+      sx={(theme) => ({
+        flex: 1,
+        minHeight: 0,
+        px: { xs: 2, sm: 3 },
+        py: { xs: 2, sm: 3 },
+        '&:focus-visible': { outline: 'none' },
+        // Only scroll inside when the fixed one-screen layout is active
+        // (matches App.css). On short or zoomed-in screens the page scrolls
+        // instead, and the panel must let the wheel pass through to it.
+        '@media (min-height: 560px)': {
+          overflowY: 'auto',
+          overscrollBehavior: 'contain',
+        },
+        ...thinBlueScrollbar(theme),
+      })}
     >
-      {value === index && (
-        <Box sx={{ px: { xs: 2, sm: 3 }, py: { xs: 2, sm: 3 } }}>{children}</Box>
-      )}
-    </div>
+      {children}
+    </Box>
   );
 }
 
@@ -85,8 +100,19 @@ export default function ResumeSection({ resumeData }) {
   };
 
   return (
-    <Paper elevation={1} sx={{ borderRadius: 2, overflow: 'hidden' }}>
+    <Paper
+      elevation={1}
+      sx={{
+        borderRadius: 2,
+        overflow: 'hidden',
+        display: 'flex',
+        flexDirection: 'column',
+        minHeight: 0,
+        height: '100%',
+      }}
+    >
       <StyledTabs
+        sx={{ flex: 'none' }}
         value={value}
         onChange={handleChange}
         aria-label="resume tabs"
