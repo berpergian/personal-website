@@ -17,6 +17,7 @@ import {
   siSentry,
   siSteam,
   siClaude,
+  siFirebase,
 } from 'simple-icons';
 
 /* Skill/tag name (as written in resume_data.json) -> brand icon.
@@ -31,6 +32,7 @@ const ICONS = {
   PostgreSQL: siPostgresql,
   MySQL: siMysql,
   Redis: siRedis,
+  Firebase: siFirebase,
   RabbitMQ: siRabbitmq,
   Docker: siDocker,
   'Docker Compose': siDocker,

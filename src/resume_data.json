@@ -21,7 +21,7 @@
     },
     {
       "category": "Databases & Caching",
-      "items": ["MongoDB (incl. sharding)", "PostgreSQL", "MySQL", "Redis"]
+      "items": ["MongoDB (incl. sharding)", "PostgreSQL", "MySQL", "Redis", "Firebase"]
     },
     {
       "category": "Messaging",
@@ -80,6 +80,7 @@
       "logo": "agate.png",
       "descJob": [
         "Worked on multiple projects for clients across different sectors.",
+        "Developed the back-end of a fantasy football game for a video-streaming platform client, covering team building, contests, match-based scoring and leaderboards.",
         "Focused on integrating with external systems and providing data to the front-end.",
         "Monitored and maintained deployment servers.",
         "Worked primarily with .NET 8, MongoDB, and PostgreSQL."
@@ -94,9 +95,9 @@
       "location": "Bandung",
       "logo": "agate.png",
       "descJob": [
-        "Developed the front-end admin dashboard and back-end systems for gamified learning apps using Ruby on Rails in a team of 5 developers.",
+        "Developed the admin dashboard and back-end for Levio, Agate's gamified learning platform for corporate clients, using Ruby on Rails, PostgreSQL and Firebase in a team of 5 developers.",
         "Developed REST APIs for communication between the back-end and front-end using Grape (a Ruby API framework).",
-        "Maintained systems for 5 different clients."
+        "Maintained the platform for 5 client tenants."
       ]
     },
     {
@@ -138,8 +139,9 @@
       ]
     },
     {
-      "title": "B2B Project",
-      "description": "",
+      "title": "Fantasy Football Game (B2B)",
+      "role": "Back-End Programmer · Agate International",
+      "description": "Skill-based fantasy football game embedded in a video-streaming app for a B2B client, played alongside live league broadcasts. Users built a team on a fixed credit budget for each match, entered contests and competed on season-long leaderboards for prizes. Built the back-end for team building, contest entry, match-based scoring, leaderboards and rank-based prize tiers, with background jobs for processing match results and verifying final standings.",
       "image": "",
       "site": "",
       "github": "",
@@ -148,6 +150,21 @@
         ".NET 5",
         "Hangfire",
         "Kubernetes"
+      ]
+    },
+    {
+      "title": "Levio",
+      "role": "Full-Stack Web Programmer · Agate International",
+      "description": "Mobile gamified learning platform from Agate Level Up, Agate's B2B gamification brand. Employees at client companies learn through quiz-style games and level up with scores and experience points as they progress through training materials. Developed the admin dashboard and back-end that power the app, and maintained the platform for 5 client tenants.",
+      "image": "",
+      "site": "",
+      "github": "",
+      "tech": [
+        "Ruby",
+        "Ruby on Rails",
+        "Grape",
+        "PostgreSQL",
+        "Firebase"
       ]
     },
     {
