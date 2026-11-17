@@ -103,14 +103,15 @@
     {
       "start": "July 2017",
       "end": "January 2018",
-      "position": "Front-End Programmer",
+      "position": "Front-End Intern",
       "company": "Ciptadra Softindo",
       "site": "https://ciptadrasoft.com/",
       "location": "Depok",
       "logo": "ciptadra.png",
       "descJob": [
-        "Designed and developed an admin dashboard for a city government using Phalcon and Bootstrap.",
-        "Designed and developed a mobile version of the admin dashboard for Android using WebView."
+        "Enhanced front-end features of an omnichannel contact center platform for enterprise and government clients, using PHP with the Phalcon framework.",
+        "Connected the interface to back-end services, fetching data and displaying it in pages and dashboards.",
+        "Built consistent, responsive layouts with Bootstrap."
       ]
     }
   ],
