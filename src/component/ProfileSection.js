@@ -25,7 +25,6 @@ export default function ProfileSection({ resumeData }) {
   const socialMedia = resumeData.socialMedia;
 
   const links = [
-    { title: 'Email', href: socialMedia.email, icon: <EmailIcon />, external: false },
     { title: 'GitHub', href: socialMedia.github, icon: <GitHubIcon />, external: true },
     { title: 'LinkedIn', href: socialMedia.linkedin, icon: <LinkedInIcon />, external: true },
     { title: 'X', href: socialMedia.x, icon: <XIcon />, external: true },
@@ -54,6 +53,9 @@ export default function ProfileSection({ resumeData }) {
         // Desktop: fill the column; scroll inside only if a short screen needs it
         height: { md: '100%' },
         overflowY: { md: 'auto' },
+        // Short/zoomed screens scroll the page: keep the card its natural
+        // height instead of stretching it next to the long tab content
+        '@media (max-height: 559px)': { height: 'auto', alignSelf: 'start' },
       }}
     >
       <Box

@@ -46,15 +46,29 @@ function TabPanel({ children, value, index }) {
       tabIndex={0}
       id={`resume-tabpanel-${index}`}
       aria-labelledby={`resume-tab-${index}`}
-      sx={{
+      sx={(theme) => ({
         flex: 1,
         minHeight: 0,
-        overflowY: 'auto',
-        overscrollBehavior: 'contain',
         px: { xs: 2, sm: 3 },
         py: { xs: 2, sm: 3 },
         '&:focus-visible': { outline: 'none' },
-      }}
+        // Only scroll inside when the fixed one-screen layout is active
+        // (matches App.css). On short or zoomed-in screens the page scrolls
+        // instead, and the panel must let the wheel pass through to it.
+        '@media (min-height: 560px)': {
+          overflowY: 'auto',
+          overscrollBehavior: 'contain',
+        },
+        // Thin scrollbar in the same blue as the tab underline
+        scrollbarWidth: 'thin',
+        scrollbarColor: `${theme.palette.primary.main} transparent`,
+        '&::-webkit-scrollbar': { width: 6 },
+        '&::-webkit-scrollbar-track': { background: 'transparent' },
+        '&::-webkit-scrollbar-thumb': {
+          backgroundColor: theme.palette.primary.main,
+          borderRadius: 3,
+        },
+      })}
     >
       {children}
     </Box>
