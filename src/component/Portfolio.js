@@ -47,6 +47,15 @@ const Media = styled('div')({
   aspectRatio: '16 / 9',
   borderRadius: 6,
   overflow: 'hidden',
+  // faint edge so light images (e.g. a white logo card) don't blend into the panel
+  '&::after': {
+    content: '""',
+    position: 'absolute',
+    inset: 0,
+    borderRadius: 'inherit',
+    boxShadow: 'inset 0 0 0 1px rgba(0, 0, 0, 0.08)',
+    pointerEvents: 'none',
+  },
 });
 
 const ThumbnailButton = styled('button')(({ theme }) => ({
@@ -198,7 +207,11 @@ function Project({ project, onOpenGallery }) {
             <img
               src={`./portfolio/${project.image}`}
               alt={project.title}
-              style={{ objectFit: project.imageFit || 'cover' }}
+              style={{
+                objectFit: project.imageFit || 'cover',
+                padding: project.imagePadding,
+                boxSizing: 'border-box',
+              }}
             />
           </ThumbnailButton>
         ) : (

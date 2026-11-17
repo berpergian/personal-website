@@ -160,8 +160,10 @@
         "REST APIs for the mobile app built with Grape.",
         "One platform serving 5 corporate client tenants, each maintained and supported over time."
       ],
-      "image": "levio/cover.jpg",
-      "gallery": ["levio/cover.jpg", "levio/app-home.jpg"],
+      "image": "levio/logo.png",
+      "imageBackground": "#ffffff",
+      "imagePadding": "0 14px 10px",
+      "gallery": ["levio/app-home.jpg", "levio/cover.jpg"],
       "video": "https://www.youtube.com/watch?v=csYMdVM20pU",
       "tech": ["Ruby", "Ruby on Rails", "Grape", "PostgreSQL", "Firebase"]
     },
