@@ -163,8 +163,7 @@
       "image": "levio/logo.png",
       "imageBackground": "#ffffff",
       "imagePadding": "0 14px 10px",
-      "gallery": ["levio/app-home.jpg", "levio/cover.jpg"],
-      "video": "https://www.youtube.com/watch?v=csYMdVM20pU",
+      "gallery": ["levio/app-home.jpg"],
       "tech": ["Ruby", "Ruby on Rails", "Grape", "PostgreSQL", "Firebase"]
     },
     {

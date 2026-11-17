@@ -17,7 +17,6 @@ import { styled, useTheme } from '@mui/material/styles';
 /* Icons */
 import WebIcon from '@mui/icons-material/Web';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import YouTubeIcon from '@mui/icons-material/YouTube';
 import PhotoLibraryIcon from '@mui/icons-material/PhotoLibrary';
 import BrandIcon from './BrandIcon';
 
@@ -148,7 +147,6 @@ function ProjectLinks({ project }) {
   const links = [
     project.site && { title: 'Website', href: project.site, icon: <WebIcon /> },
     project.steam && { title: 'Steam', href: project.steam, icon: <BrandIcon name="Steam" colored={false} /> },
-    project.video && { title: 'Video', href: project.video, icon: <YouTubeIcon /> },
     project.github && { title: 'GitHub', href: project.github, icon: <GitHubIcon /> },
   ].filter(Boolean);
 
