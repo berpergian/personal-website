@@ -118,8 +118,17 @@
     {
       "title": "RIFTSTORM",
       "role": "Back-End Programmer · Confiction Labs",
-      "description": "Co-op PvE looter-shooter ARPG for PC, now in Steam Early Access. Built the game's back-end services in .NET 8 and MongoDB, covering player data and inventory, sharded multi-region storage and background jobs, and kept the game server stable for 1,000+ players during Steam Next Fest in June 2025.",
+      "summary": "Co-op PvE looter-shooter ARPG for PC, now in Steam Early Access. I built back-end services in .NET 8 and MongoDB that kept the game stable for 1,000+ players during Steam Next Fest in June 2025.",
+      "details": [
+        "Player data models such as inventory, persisted in MongoDB.",
+        "MongoDB sharding for multi-region data locality and performance.",
+        "Hangfire background jobs moved into a standalone service, with job tagging and account-based filtering.",
+        "Sentry monitoring with custom issue and transaction tags for faster diagnostics.",
+        "CI/CD pipelines that containerize the server, so game programmers can test back-end integration on their own."
+      ],
       "image": "riftstorm/header.jpg",
+      "imageFit": "contain",
+      "imageBackground": "#0b0d2b",
       "gallery": [
         "riftstorm/screenshot-1.jpg",
         "riftstorm/screenshot-2.jpg",
@@ -127,81 +136,53 @@
       ],
       "site": "https://www.playriftstorm.com/",
       "steam": "https://store.steampowered.com/app/2282790/RIFTSTORM/",
-      "github": "",
-      "tech": [
-        "C#",
-        ".NET 8",
-        "MongoDB",
-        "Hangfire",
-        "Sentry",
-        "Docker",
-        "Kubernetes"
-      ]
+      "tech": ["C#", ".NET 8", "MongoDB", "Hangfire", "Sentry", "Docker", "Kubernetes"]
     },
     {
       "title": "Fantasy Football Game (B2B)",
       "role": "Back-End Programmer · Agate International",
-      "description": "Skill-based fantasy football game embedded in a video-streaming app for a B2B client, played alongside live league broadcasts. Users built a team on a fixed credit budget for each match, entered contests and competed on season-long leaderboards for prizes. Built the back-end for team building, contest entry, match-based scoring, leaderboards and rank-based prize tiers, with background jobs for processing match results and verifying final standings.",
-      "image": "",
-      "site": "",
-      "github": "",
-      "tech": [
-        "C#",
-        ".NET 5",
-        "Hangfire",
-        "Kubernetes"
-      ]
+      "summary": "Skill-based fantasy football game inside a video-streaming app, played alongside live league broadcasts. I built the back-end for team building, contests, match scoring and leaderboards.",
+      "details": [
+        "Users built a team on a fixed credit budget for each match and entered contests.",
+        "Match-based scoring and season-long leaderboards with rank-based prize tiers.",
+        "Hangfire background jobs for processing match results and verifying final standings.",
+        "Built for a B2B client; the game and client stay unnamed under NDA."
+      ],
+      "tech": ["C#", ".NET 5", "Hangfire", "Kubernetes"]
     },
     {
       "title": "Levio",
       "role": "Full-Stack Web Programmer · Agate International",
-      "description": "Mobile gamified learning platform from Agate Level Up, Agate's B2B gamification brand. Employees at client companies learn through quiz-style games and level up with scores and experience points as they progress through training materials. Developed the admin dashboard and back-end that power the app, and maintained the platform for 5 client tenants.",
-      "image": "",
-      "site": "",
-      "github": "",
-      "tech": [
-        "Ruby",
-        "Ruby on Rails",
-        "Grape",
-        "PostgreSQL",
-        "Firebase"
-      ]
+      "summary": "Gamified learning app for Android and iOS from Agate Level Up, used by companies for employee training. I developed the admin dashboard and back-end, and maintained the platform for 5 client tenants.",
+      "details": [
+        "Learners' avatars level up and evolve with experience points earned from missions and courses.",
+        "Admin dashboard and back-end built with Ruby on Rails and PostgreSQL, with Firebase.",
+        "REST APIs for the mobile app built with Grape.",
+        "One platform serving 5 corporate client tenants, each maintained and supported over time."
+      ],
+      "image": "levio/cover.jpg",
+      "gallery": ["levio/cover.jpg", "levio/app-home.jpg"],
+      "video": "https://www.youtube.com/watch?v=csYMdVM20pU",
+      "tech": ["Ruby", "Ruby on Rails", "Grape", "PostgreSQL", "Firebase"]
     },
     {
       "title": "Government Project #1",
-      "description": "Website that presents reports and operational data from each local government unit to the governor.",
-      "image": "",
-      "site": "",
-      "github": "",
-      "tech": [
-        "PHP",
-        "Phalcon",
-        "Data Visualization"
-      ]
+      "role": "Front-End Programmer · Ciptadra Softindo",
+      "summary": "Website that presents reports and operational data from each local government unit to the governor.",
+      "tech": ["PHP", "Phalcon", "Data Visualization"]
     },
     {
       "title": "Government Project #2",
-      "description": "Mobile app that centralizes local government services for city residents.",
-      "image": "",
-      "site": "",
-      "github": "",
-      "tech": [
-        "Java",
-        "Android",
-        "WebView"
-      ]
+      "role": "Front-End Programmer · Ciptadra Softindo",
+      "summary": "Mobile app that centralizes local government services for city residents.",
+      "tech": ["Java", "Android", "WebView"]
     },
     {
       "title": "Online Shop Website",
-      "description": "(Unfinished) Online shop website built with Angular 2 for a 5th-semester web programming course.",
-      "image": "",
-      "site": "",
+      "role": "University project",
+      "summary": "(Unfinished) Online shop website built with Angular 2 for a 5th-semester web programming course.",
       "github": "https://github.com/berpergian/GhtAngularFrontend",
-      "tech": [
-        "Angular 2",
-        "Bootstrap",
-        "Web"
-      ]
+      "tech": ["Angular 2", "Bootstrap", "Web"]
     }
   ]
 }
