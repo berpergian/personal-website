@@ -1,9 +1,9 @@
 {
   "name": "Muhammad Ganjar Imanudin",
   "title": "Back-End Developer",
-  "headline": ".NET · MongoDB · PostgreSQL",
+  "headline": ".NET · SQL Server · MongoDB",
   "photo": "/ProfilePicture.jpg",
-  "summaryBio": "Software developer with 5+ years of experience building scalable web applications, focused on back-end development and always eager to keep growing my back-end skills.",
+  "summaryBio": "Software developer with 6+ years of experience building scalable web applications, focused on back-end development and always eager to keep growing my back-end skills.",
   "socialMedia": {
     "email": "mailto:emailmganjar@gmail.com",
     "github": "https://github.com/berpergian",
@@ -13,23 +13,23 @@
   "skills": [
     {
       "category": "Languages",
-      "items": ["C#", "Ruby", "Python", "JavaScript", "SQL"]
+      "items": ["C#", "Ruby", "Python", "JavaScript", "SQL", "T-SQL"]
     },
     {
       "category": "Back-end",
-      "items": [".NET / ASP.NET Core", "Ruby on Rails", "Grape", "Hangfire"]
+      "items": [".NET / ASP.NET Core", "ASP.NET Web API", "EF Core", "Dapper", "MediatR (CQRS)", "Hangfire", "Ruby on Rails", "Grape"]
     },
     {
       "category": "Databases & Caching",
-      "items": ["MongoDB (incl. sharding)", "PostgreSQL", "MySQL", "Redis", "Firebase"]
+      "items": ["SQL Server", "MongoDB (incl. sharding)", "PostgreSQL", "MySQL", "Redis", "Firebase"]
     },
     {
       "category": "Messaging",
-      "items": ["RabbitMQ"]
+      "items": ["RabbitMQ", "MassTransit", "Azure Service Bus"]
     },
     {
       "category": "DevOps & Infrastructure",
-      "items": ["Docker", "Docker Compose", "Kubernetes", "CI/CD", "Git"]
+      "items": ["Docker", "Docker Compose", "Kubernetes", "Azure DevOps", "CI/CD", "Git"]
     },
     {
       "category": "Monitoring",
@@ -42,7 +42,7 @@
     },
     {
       "category": "Practices",
-      "items": ["REST API design", "Microservices", "Background jobs", "Multi-region data"]
+      "items": ["REST API design", "Microservices", "Multi-tenant architecture", "Background jobs", "Multi-region data", "Unit testing (xUnit)", "Team leadership & code review"]
     },
     {
       "category": "Interests",
@@ -50,6 +50,40 @@
     }
   ],
   "experience": [
+    {
+      "start": "October 2026",
+      "end": "Present",
+      "position": "Software Engineer",
+      "company": "PT Berlian Sistem Informasi",
+      "site": "https://www.bsi.co.id/en",
+      "location": "Jakarta",
+      "logo": "bsi.svg",
+      "note": "Dev Lead of the Sales & Purchasing team · microservice dealer platform",
+      "descJob": [
+        "Lead the development team responsible for the Sales and Purchasing services of a multi-tenant microservice platform for automotive distributors.",
+        "Plan and break down user stories, review pull requests against the requirement docs, and manage the team's release merges.",
+        "Build services with .NET 10 and ASP.NET Core, EF Core with SQL Server, CQRS (MediatR), event-driven messaging (MassTransit, RabbitMQ) and Redis.",
+        "Translate business requirements into validated domain logic that behaves consistently across tenants.",
+        "Deliver document generation and reporting, backed by unit tests with xUnit."
+      ]
+    },
+    {
+      "start": "October 2025",
+      "end": "October 2026",
+      "position": "Software Engineer",
+      "company": "PT Berlian Sistem Informasi",
+      "site": "https://www.bsi.co.id/en",
+      "location": "Jakarta",
+      "logo": "bsi.svg",
+      "note": "Monolithic dealer management system",
+      "descJob": [
+        "Maintained and extended a dealer management web application for an automotive distributor, covering sales, after-sales service and customer care.",
+        "Designed and optimized 230+ SQL Server stored procedures for business processes and reports.",
+        "Built integrations with third-party services through message queues and callback APIs, with care for personal data.",
+        "Developed scheduled and queue-driven background services with Hangfire, RabbitMQ and Azure Service Bus.",
+        "Integrated with SAP and shipped through Azure DevOps CI/CD pipelines."
+      ]
+    },
     {
       "start": "January 2023",
       "end": "July 2025",
@@ -116,6 +150,35 @@
     }
   ],
   "portfolio": [
+    {
+      "title": "Dealer Platform: Sales & Purchasing Microservices",
+      "role": "Dev Lead · PT Berlian Sistem Informasi",
+      "summary": "Multi-tenant microservice platform for automotive distributors. I lead the team that builds the Sales and Purchasing services.",
+      "details": [
+        "Team leadership: story breakdown, code review and release merges.",
+        "CQRS and event-driven services with MediatR, MassTransit and RabbitMQ.",
+        "Business rule validation that stays consistent across tenants.",
+        "Reporting and document generation.",
+        "Unit testing with xUnit.",
+        "Built for a client; the product and client stay unnamed."
+      ],
+      "hideMedia": true,
+      "tech": ["C#", ".NET 10", "ASP.NET Core", "EF Core", "SQL Server", "MediatR", "MassTransit", "RabbitMQ", "Redis", "xUnit"]
+    },
+    {
+      "title": "Dealer Management System",
+      "role": "Software Engineer · PT Berlian Sistem Informasi",
+      "summary": "Monolithic web application for an automotive distributor and its dealer network. I maintained and extended it across the web portal, the database and background services.",
+      "details": [
+        "Stored procedure development for business processes and reports.",
+        "Third-party and SAP integrations.",
+        "Queue-driven and scheduled background jobs.",
+        "CI/CD pipelines on Azure DevOps.",
+        "Built for a client; the product and client stay unnamed."
+      ],
+      "hideMedia": true,
+      "tech": ["C#", "ASP.NET WebForms", "ASP.NET Web API", "Dapper", "SQL Server", "Hangfire", "RabbitMQ", "Azure Service Bus"]
+    },
     {
       "title": "RIFTSTORM",
       "role": "Back-End Programmer · Confiction Labs",
