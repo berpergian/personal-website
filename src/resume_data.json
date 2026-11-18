@@ -152,9 +152,10 @@
   "portfolio": [
     {
       "title": "Dealer Platform: Sales & Purchasing Microservices",
-      "role": "Dev Lead · PT Berlian Sistem Informasi",
-      "summary": "Multi-tenant microservice platform for automotive distributors. I lead the team that builds the Sales and Purchasing services.",
+      "role": "Software Engineer & Dev Lead · PT Berlian Sistem Informasi",
+      "summary": "Multi-tenant microservice platform for automotive distributors. I build and lead the team that develops the Sales and Purchasing services.",
       "details": [
+        "Hands-on development of Sales and Purchasing features across core and tenant services.",
         "Team leadership: story breakdown, code review and release merges.",
         "CQRS and event-driven services with MediatR, MassTransit and RabbitMQ.",
         "Business rule validation that stays consistent across tenants.",
@@ -162,7 +163,6 @@
         "Unit testing with xUnit.",
         "Built for a client; the product and client stay unnamed."
       ],
-      "hideMedia": true,
       "tech": ["C#", ".NET 10", "ASP.NET Core", "EF Core", "SQL Server", "MediatR", "MassTransit", "RabbitMQ", "Redis", "xUnit"]
     },
     {
@@ -176,7 +176,6 @@
         "CI/CD pipelines on Azure DevOps.",
         "Built for a client; the product and client stay unnamed."
       ],
-      "hideMedia": true,
       "tech": ["C#", "ASP.NET WebForms", "ASP.NET Web API", "Dapper", "SQL Server", "Hangfire", "RabbitMQ", "Azure Service Bus"]
     },
     {

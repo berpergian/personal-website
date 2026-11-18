@@ -24,30 +24,19 @@ import BrandIcon from './BrandIcon';
 const NO_IMAGE = './NoImage.jpg';
 
 /* Styled Components */
-const Layout = styled('div', {
-  shouldForwardProp: (prop) => prop !== 'hideMedia',
-})(({ theme, hideMedia }) =>
-  hideMedia
-    ? {
-        // No media column: the text takes the full width
-        display: 'grid',
-        gridTemplateColumns: 'minmax(0, 1fr)',
-        gridTemplateAreas: '"header" "body"',
-      }
-    : {
-        display: 'grid',
-        gridTemplateColumns: 'minmax(0, 1fr) 200px',
-        gridTemplateAreas: '"header media" "body media"',
-        gridTemplateRows: 'auto 1fr',
-        columnGap: theme.spacing(2.5),
-        // Phones: media goes full width between the title and the text
-        [theme.breakpoints.down('sm')]: {
-          gridTemplateColumns: 'minmax(0, 1fr)',
-          gridTemplateAreas: '"header" "media" "body"',
-          rowGap: theme.spacing(1),
-        },
-      }
-);
+const Layout = styled('div')(({ theme }) => ({
+  display: 'grid',
+  gridTemplateColumns: 'minmax(0, 1fr) 200px',
+  gridTemplateAreas: '"header media" "body media"',
+  gridTemplateRows: 'auto 1fr',
+  columnGap: theme.spacing(2.5),
+  // Phones: media goes full width between the title and the text
+  [theme.breakpoints.down('sm')]: {
+    gridTemplateColumns: 'minmax(0, 1fr)',
+    gridTemplateAreas: '"header" "media" "body"',
+    rowGap: theme.spacing(1),
+  },
+}));
 
 const Media = styled('div')({
   gridArea: 'media',
@@ -197,7 +186,7 @@ function Project({ project, onOpenGallery }) {
   );
 
   return (
-    <Layout hideMedia={project.hideMedia}>
+    <Layout>
       <Header>
         <Typography component="h3" sx={{ fontWeight: 'bold', flex: 1 }}>
           {project.title}
@@ -205,45 +194,43 @@ function Project({ project, onOpenGallery }) {
         <ProjectLinks project={project} />
       </Header>
 
-      {!project.hideMedia && (
-        <Media>
-          {project.image ? (
-            <ThumbnailButton
-              type="button"
-              onClick={() => onOpenGallery(project)}
-              aria-label={`View ${project.title} images`}
-              style={{ background: project.imageBackground || 'transparent' }}
-            >
-              <img
-                src={`./portfolio/${project.image}`}
-                alt={project.title}
-                style={{
-                  objectFit: project.imageFit || 'cover',
-                  padding: project.imagePadding,
-                  boxSizing: 'border-box',
-                }}
-              />
-            </ThumbnailButton>
-          ) : (
+      <Media>
+        {project.image ? (
+          <ThumbnailButton
+            type="button"
+            onClick={() => onOpenGallery(project)}
+            aria-label={`View ${project.title} images`}
+            style={{ background: project.imageBackground || 'transparent' }}
+          >
             <img
-              src={NO_IMAGE}
-              alt=""
+              src={`./portfolio/${project.image}`}
+              alt={project.title}
               style={{
-                display: 'block',
-                width: '100%',
-                height: '100%',
-                objectFit: 'cover',
+                objectFit: project.imageFit || 'cover',
+                padding: project.imagePadding,
+                boxSizing: 'border-box',
               }}
             />
-          )}
-          {project.gallery?.length > 0 && (
-            <GalleryBadge>
-              <PhotoLibraryIcon sx={{ fontSize: 13 }} />
-              {project.gallery.length}
-            </GalleryBadge>
-          )}
-        </Media>
-      )}
+          </ThumbnailButton>
+        ) : (
+          <img
+            src={NO_IMAGE}
+            alt=""
+            style={{
+              display: 'block',
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+            }}
+          />
+        )}
+        {project.gallery?.length > 0 && (
+          <GalleryBadge>
+            <PhotoLibraryIcon sx={{ fontSize: 13 }} />
+            {project.gallery.length}
+          </GalleryBadge>
+        )}
+      </Media>
 
       <div style={{ gridArea: 'body' }}>
         {project.role && (
