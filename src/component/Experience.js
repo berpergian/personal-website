@@ -72,7 +72,7 @@ export default function Experience({ expData }) {
               )}
             </div>
             <LogoGrid>
-              <Logo src={`./company/${exp.logo}`} alt={exp.company} />
+              {exp.logo && <Logo src={`./company/${exp.logo}`} alt={exp.company} />}
             </LogoGrid>
             <div style={{ gridColumn: '1 / 3' }}>
               <List>

@@ -137,7 +137,7 @@
     {
       "start": "July 2017",
       "end": "January 2018",
-      "position": "Front-End Intern",
+      "position": "Front-End Developer (promoted from Intern)",
       "company": "Ciptadra Softindo",
       "site": "https://ciptadrasoft.com/",
       "location": "Depok",
@@ -231,8 +231,8 @@
     },
     {
       "title": "Omnichannel Contact Center Platform",
-      "role": "Front-End Intern · Ciptadra Softindo",
-      "summary": "Enterprise and government platform that brings customer conversations from multiple channels into one place, with ticketing, reports and dashboards. As a front-end intern I enhanced features and connected the interface to back-end data.",
+      "role": "Front-End Developer (promoted from Intern) · Ciptadra Softindo",
+      "summary": "Enterprise and government platform that brings customer conversations from multiple channels into one place, with ticketing, reports and dashboards. I enhanced front-end features and connected the interface to back-end data.",
       "details": [
         "Built and enhanced front-end features with PHP and the Phalcon framework.",
         "Fetched data from back-end services and displayed it in pages and dashboards.",
